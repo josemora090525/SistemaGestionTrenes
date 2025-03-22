@@ -1,4 +1,4 @@
-public class Administrator extends AbstractSession{
+public class Employee extends AbstractSession{
 
     private String name;
     private String id;
@@ -6,7 +6,7 @@ public class Administrator extends AbstractSession{
     private String password;
     private boolean login;
 
-    public Administrator(String name, String id, String mail, String password) {
+    public Employee(String name, String id, String mail, String password) {
         this.name = name;
         this.id = id;
         this.mail = mail;
@@ -29,7 +29,7 @@ public class Administrator extends AbstractSession{
     public String getPassword() {
         return password;
     }
-    
+
     @Override
     public boolean logIn(String mail, String password) {
         if(!this.mail.equals(mail) || this.password.equals(password)) {

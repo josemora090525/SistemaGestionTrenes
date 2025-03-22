@@ -1,4 +1,4 @@
-public class Administrator extends AbstractSession{
+public class User extends AbstractSession{
 
     private String name;
     private String id;
@@ -6,7 +6,7 @@ public class Administrator extends AbstractSession{
     private String password;
     private boolean login;
 
-    public Administrator(String name, String id, String mail, String password) {
+    public User(String name, String id, String mail, String password) {
         this.name = name;
         this.id = id;
         this.mail = mail;
@@ -47,15 +47,6 @@ public class Administrator extends AbstractSession{
 
     @Override
     public boolean logOut() {
-        if(login){
-            login = false;
-            System.out.println("Sesion cerrada");
-            return true;
-        }
-
-        else{
-            System.out.println("No hay ninguna sesion activa");
-            return false;
-        }
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }
