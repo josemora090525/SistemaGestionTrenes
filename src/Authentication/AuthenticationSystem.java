@@ -1,5 +1,5 @@
 import AdministratorTasks.HashTableUsers;
-import Actors.User; // Ensure this is the correct package for the User class
+import Actors.User; 
 
 public class AuthenticationSystem {
 
