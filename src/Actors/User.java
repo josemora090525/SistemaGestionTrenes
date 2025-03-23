@@ -1,17 +1,17 @@
-public class User extends AbstractSession{
+public class User {
 
     private String name;
     private String id;
     private String mail;
     private String password;
-    private boolean login;
-
-    public User(String name, String id, String mail, String password) {
+    private String rol;
+    
+    public User(String name, String id, String mail, String password, String rol) {
         this.name = name;
         this.id = id;
         this.mail = mail;
         this.password = password;
-        login = false;
+        this.rol = rol;
     }
 
     public String getName() {
@@ -30,23 +30,4 @@ public class User extends AbstractSession{
         return password;
     }
     
-    @Override
-    public boolean logIn(String mail, String password) {
-        if(!this.mail.equals(mail) || this.password.equals(password)) {
-            System.out.println("Correo o contraseña incorrectos");
-            return false;
-        }
-
-        else if(this.mail.equals(mail) && this.password.equals(password)){
-            login = true;
-            System.out.println("Sesion iniciada");
-            return true;
-        }
-        return false;
-    }
-
-    @Override
-    public boolean logOut() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
 }
