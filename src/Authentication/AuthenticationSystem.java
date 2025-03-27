@@ -10,7 +10,7 @@ public class AuthenticationSystem {
         this.tableUsers = tableUsers;
     }
     
-    public boolean logIn(String mail, String password){
+    public boolean login(String mail, String password){
         User user = tableUsers.search(mail);
         
         if(user == null){
