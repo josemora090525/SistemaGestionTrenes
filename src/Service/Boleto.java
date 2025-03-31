@@ -2,7 +2,7 @@ package Service;
 
 import java.time.LocalDateTime;
 
-public class Ticket {
+public class Boleto {
 
     private String IdRegistro;
     private LocalDateTime fechaHoraCompra;
@@ -26,7 +26,7 @@ public class Ticket {
     private String IdVagonCarga;
 
     
-    public Ticket(String idRegistro, LocalDateTime fechaHoraCompra, LocalDateTime fechaHoraSalida,
+    public Boleto(String idRegistro, LocalDateTime fechaHoraCompra, LocalDateTime fechaHoraSalida,
             LocalDateTime fechaHorallegada, String idPasajero, String nombres, String apelllidos,
             String tipoIdentificacion, String direccion, String telefono, String idTren, String lugar,
             String categoriaPasajero, double valorPasaje, String contactoNombres, String contactoApellidos,

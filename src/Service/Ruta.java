@@ -1,6 +1,6 @@
 package Service;
 
-public class Route {
+public class Ruta {
 
     private String IdRuta;
     private String Origen;
@@ -8,7 +8,7 @@ public class Route {
 
 
     
-    public Route(String idRuta, String origen, String destino) {
+    public Ruta(String idRuta, String origen, String destino) {
         IdRuta = idRuta;
         Origen = origen;
         Destino = destino;
