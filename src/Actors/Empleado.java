@@ -1,4 +1,4 @@
-package Actors
+package Actors;
 
 public class Empleado extends Usuario{
     

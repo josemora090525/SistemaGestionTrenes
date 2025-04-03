@@ -1,4 +1,4 @@
-package Actors
+package Actors;
 
 public class Administrador extends Usuario{
 
