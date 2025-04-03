@@ -1,6 +1,6 @@
 package EmployeeTasks;
 
-public class ListaCircular <T extends InterfazLista> {
+public class ListaCircular <T> {
 
     private Nodo<T> cabeza; 
     private Nodo<T> cola;   
@@ -29,7 +29,7 @@ public class ListaCircular <T extends InterfazLista> {
         tamanio++;
     }
 
-    public void eliminar(String id) {
+    public void eliminar(T elemento) {
         if (cabeza == null) { 
             System.out.println("La lista está vacía, no hay elementos que eliminar.");
             return;
@@ -39,7 +39,7 @@ public class ListaCircular <T extends InterfazLista> {
         Nodo<T> puntero = cola;
 
         do {
-            if (actual.getElemento().getId().equals(id)) { 
+            if (actual.getElemento().equals(elemento)) { 
                 if (actual == cabeza) { 
                     cabeza = cabeza.getSiguiente();
                     cola.setSiguiente(cabeza); 
@@ -54,7 +54,7 @@ public class ListaCircular <T extends InterfazLista> {
                     puntero.setSiguiente(actual.getSiguiente());
                 }
                 tamanio--;
-                System.out.println("Elemento eliminado: " + id);
+                System.out.println("Elemento eliminado: " + elemento);
                 return;
             }
             
@@ -62,10 +62,10 @@ public class ListaCircular <T extends InterfazLista> {
             actual = actual.getSiguiente(); 
         } while (actual != cabeza);
 
-        System.out.println("No se encontró el elemento con ID: " + id);
+        System.out.println("No se encontró el elemento: " + elemento);
     }
 
-    public T buscar(String id) {
+    public T buscar(T elemento) {
         if (cabeza == null) {
             System.out.println("La lista está vacía.");
             return null;
@@ -74,14 +74,14 @@ public class ListaCircular <T extends InterfazLista> {
         Nodo<T> actual = cabeza;
 
         do {
-            if (actual.getElemento().getId().equals(id)) { 
-                System.out.println("Elemento encontrado: " + actual.getElemento().getId());
+            if (actual.getElemento().equals(elemento)) { 
+                System.out.println("Elemento encontrado: " + actual.getElemento());
                 return actual.getElemento();
             }
             actual = actual.getSiguiente(); 
         } while (actual != cabeza);
 
-        System.out.println("No se encontró el elemento con ID: " + id);
+        System.out.println("No se encontró el elemento: " + elemento);
         return null;
     }
 

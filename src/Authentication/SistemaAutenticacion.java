@@ -1,4 +1,4 @@
-package Aunthentication;
+package Authentication;
 import Actors.Usuario;
 import AdministratorTasks.TablaHash;
 

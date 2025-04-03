@@ -15,7 +15,9 @@ public class TrenArnold extends Tren{
     public void verificarNumeroVagones() {
         if (pilaVagones.totalElementos() > pilaVagones.getCapacidad()) {
             System.out.println("La cantidad de vagones no es permitida.");
-        } else {
+        } 
+        
+        else {
             System.out.println("Cantidad de vagones correcta.");
         }
     }

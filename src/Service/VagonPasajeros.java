@@ -1,5 +1,8 @@
 package Service;
 
+import Actors.Pasajero;
+import EmployeeTasks.ColaPrioridad;
+
 public class VagonPasajeros extends Vagon{
 
     private int premium;
@@ -7,6 +10,7 @@ public class VagonPasajeros extends Vagon{
     private int estandar;
     private int pilotos;
     private int personal;
+    private ColaPrioridad<Pasajero> colaPasajeros = new ColaPrioridad<>(100);
 
     public VagonPasajeros(String idVagon, int capacidad) {
         super(idVagon, capacidad);
@@ -35,6 +39,10 @@ public class VagonPasajeros extends Vagon{
 
     public int getPersonal() {
         return personal;
+    }
+
+    public void abordarPasajeros(Pasajero pasajero){
+        colaPasajeros.encolar(pasajero);
     }
 
 }
