@@ -31,15 +31,27 @@ public class ColaPrioridad <T extends InterfazColaPrioridad>{
         }
     }
 
-    public void desencolar() {
+    public T desencolar() {
         if (cantidadElementos == 0) {
             System.out.println("La cola está vacía");
+            return null;
         }
 
+        T elemento = elementos[0];
+        for (int i = 0; i < cantidadElementos - 1; i++) {
+            elementos[i] = elementos[i + 1];
+        }
         cantidadElementos--;
+        return elemento;
+    }
 
-        for(int ii = 0; ii < cantidadElementos; ii++){
-            System.out.println(elementos[ii]);
+    public void mostrarCola() {
+        for (int i = 0; i < cantidadElementos; i++) {
+            System.out.println(elementos[i]);
         }
+    }
+
+    public int getCantidadElementos() {
+        return cantidadElementos;
     }
 }

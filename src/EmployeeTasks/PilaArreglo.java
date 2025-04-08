@@ -48,6 +48,19 @@ public class PilaArreglo <T> {
             return elementos[tope];
         }
     }
+
+    public void mostrarElementos() {
+        if (tope < 0) {
+            System.out.println("La pila de vagones está vacía.");
+            return;
+        }
+
+        System.out.println("Elementos en la pila:");
+        for (int i = tope; i >= 0; i--) {
+            System.out.println(elementos[i]);
+        }
+
+    }
     
     public int totalElementos(){
         return tope + 1;

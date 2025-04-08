@@ -1,5 +1,4 @@
 package Service;
-
 import Actors.Pasajero;
 import EmployeeTasks.ColaPrioridad;
 
@@ -10,7 +9,8 @@ public class VagonPasajeros extends Vagon{
     private int estandar;
     private int pilotos;
     private int personal;
-    private ColaPrioridad<Pasajero> colaPasajeros = new ColaPrioridad<>(100);
+    private ColaPrioridad<Pasajero> colaAbordaje = new ColaPrioridad<>(40);
+    private int asientos;
 
     public VagonPasajeros(String idVagon, int capacidad) {
         super(idVagon, capacidad);
@@ -41,8 +41,54 @@ public class VagonPasajeros extends Vagon{
         return personal;
     }
 
-    public void abordarPasajeros(Pasajero pasajero){
-        colaPasajeros.encolar(pasajero);
+    public ColaPrioridad<Pasajero> getColaAbordaje() {
+        return colaAbordaje;
+    }
+
+    public int getAsientos() {
+        return asientos;
+    }
+
+    public void setAsientos(int asientos) {
+        this.asientos = asientos;
+    }
+
+    public void abordarPasajeros(Pasajero pasajero) {
+        if (colaAbordaje.getCantidadElementos() >= getCapacidad()) {
+            System.out.println("El vagón está lleno. No se puede agregar más pasajeros.");
+            return;
+        }
+        colaAbordaje.encolar(pasajero);
+    }
+
+    public void asignarAsientos() {
+        int asientoActual = getCapacidad();
+        Pasajero pasajero;
+
+        while ((pasajero = colaAbordaje.desencolar()) != null) {
+            pasajero.setNumeroAsiento(asientoActual--);
+            System.out.println("Pasajero " + pasajero.getNombre() + " asignado al asiento: " + pasajero.getNumeroAsiento());
+        }
+    }
+
+    public void desencolarPasajero() {
+        Pasajero pasajero = colaAbordaje.desencolar();
+        if (pasajero != null) {
+            System.out.println("Pasajero desencolado: " + pasajero.getNombre());
+        }
+    }
+
+    public void mostrarPasajeros() {
+        System.out.println("Lista de pasajeros en la cola de abordaje:");
+        colaAbordaje.mostrarCola();
+    }
+
+    public void mostrarOrdenAbordaje() {
+        System.out.println("Orden de abordaje para el vagón:");
+        while (colaAbordaje.getCantidadElementos() > 0) {
+            Pasajero pasajero = colaAbordaje.desencolar();
+            System.out.println("    " + pasajero.getNombre() + " - Prioridad: " + pasajero.getPrioridad());
+        }
     }
 
 }
