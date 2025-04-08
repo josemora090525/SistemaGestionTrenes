@@ -7,8 +7,8 @@ public class Pasajero extends Usuario implements InterfazColaPrioridad{
     private int prioridad;
     private int numeroAsiento;
     
-    public Pasajero(String nombre, String identificacion, String correo, String contraseña, String rol) {
-        super(nombre, identificacion, correo, contraseña, rol);
+    public Pasajero(String nombre, String identificacion, String correo, String contrasenia, String rol) {
+        super(nombre, identificacion, correo, contrasenia, rol);
         this.numeroAsiento = numeroAsiento;
         this.prioridad = prioridad;
     }

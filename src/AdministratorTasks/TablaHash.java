@@ -1,64 +1,87 @@
 package AdministratorTasks;
 
-public class TablaHash <T> {
+public class TablaHash <K, V> {
 
     private int tamanio;
-    private String[] claves;
-    private String[] valores;
+    private K[] claves;
+    private V[] valores;
 
     public TablaHash(int tamanio) {
         this.tamanio = tamanio;
-        claves = new String[tamanio];
-        valores = new String[tamanio];
+        claves = (K[]) new Object[tamanio];
+        valores = (V[]) new Object[tamanio];
     }
 
-    private int hashFunction(String clave) {
+    private int hashFunction(K clave) {
         int hashCode = clave.hashCode();
         return Math.abs(hashCode % tamanio);
     }
 
-    public void insertarValores(String clave, String valor) {
-        int indice = hashFunction(clave);
-        while (claves[indice] != null && !claves[indice].equals(clave)) {
-            indice = (indice + 1) % tamanio;
-        }
-        claves[indice] = clave;
-        valores[indice] = valor;
-    }
-
-    public T buscarValores(String clave) {
+    public boolean contieneClave(K clave) {
         int indice = hashFunction(clave);
 
         while (claves[indice] != null) {
             if (claves[indice].equals(clave)) {
-                System.out.println("Valores encontrados: " + valores[indice]);
-                return (T) valores[indice];
+                return true;
+            }
+            indice = (indice + 1) % tamanio;
+        }
+        return false;
+    }
+
+    public void insertarValores(K clave, V valor) {
+        if (contieneClave(clave)) {
+            System.out.println("Clave ya existente: " + clave);
+            return;
+        }
+
+        int indice = hashFunction(clave);
+
+        while (claves[indice] != null && !claves[indice].equals(clave)) {
+            indice = (indice + 1) % tamanio;
+        }
+
+        claves[indice] = clave;
+        valores[indice] = valor;
+
+        System.out.println("Valor insertado: Clave=" + clave + ", Valor=" + valor);
+    }
+
+    public V buscarValores(K clave) {
+        int indice = hashFunction(clave);
+
+        while (claves[indice] != null) {
+            if (claves[indice].equals(clave)) {
+                System.out.println("Valor encontrado para clave " + clave + ": " + valores[indice]);
+                return valores[indice];
             }
             indice = (indice + 1) % tamanio;
         }
 
-        System.out.println("Valores no encontrados");
+        System.out.println("Clave " + clave + " no encontrada.");
         return null;
     }
 
-    public void eliminarValores(String clave) {
+    public void eliminarValores(K clave) {
         int indice = hashFunction(clave);
+
         while (claves[indice] != null) {
             if (claves[indice].equals(clave)) {
                 claves[indice] = null;
                 valores[indice] = null;
-                System.out.println("Eliminado " + clave + " del índice " + indice);
+                System.out.println("Clave eliminada: " + clave);
                 return;
             }
             indice = (indice + 1) % tamanio;
         }
-        System.out.println("Valores no encontrados");
+        System.out.println("Clave " + clave + " no encontrada.");
     }
 
     public void mostrarValores() {
-        for (int i = 0; i < tamanio; i++) {
-            if (claves[i] != null) {
-                System.out.println("Índice " + i + ": " + claves[i] + ", " + valores[i]);
+        System.out.println("Contenido de la tabla hash:");
+        for (int ii = 0; ii < tamanio; ii++) {
+            if (claves[ii] != null) {
+                System.out.println("Índice " + ii + ": Clave=" + claves[ii] + ", Valor=" + valores[ii]);
             }
         }
     }
