@@ -1,7 +1,6 @@
 package Service;
-import EmployeeTasks.ListaCircular;
-import EmployeeTasks.Nodo;
 import AdministratorTasks.TablaHash;
+import EmployeeTasks.ListaCircular;
 
 public class Estacion {
 
@@ -22,6 +21,9 @@ public class Estacion {
     }
 
     public void setIdEstacion(String idEstacion) {
+        if (idEstacion == null || idEstacion.isEmpty()) {
+            throw new IllegalArgumentException("El ID de la estación no puede estar vacío.");
+        }
         this.idEstacion = idEstacion;
     }
 
@@ -30,6 +32,9 @@ public class Estacion {
     }
 
     public void setNombreEstacion(String nombreEstacion) {
+        if (nombreEstacion == null || nombreEstacion.isEmpty()) {
+            throw new IllegalArgumentException("El nombre de la estación no puede estar vacío.");
+        }
         this.nombreEstacion = nombreEstacion;
     }
 
@@ -37,38 +42,42 @@ public class Estacion {
         return listaTrenes;
     }
 
-    public void setListaTrenes(ListaCircular<Tren> listaTrenes) {
-        this.listaTrenes = listaTrenes;
-    }
-
     public TablaHash<String, Ruta> getRutas() {
         return rutas;
     }
 
-    public void setRutas(TablaHash<String, Ruta> rutas) {
-        this.rutas = rutas;
-    }
-
     public void agregarTren(Tren tren) {
+        if (tren == null) {
+            throw new IllegalArgumentException("El tren no puede ser nulo.");
+        }
         listaTrenes.agregar(tren);
         System.out.println("Tren " + tren.getId() + " agregado a la estación " + nombreEstacion + ".");
     }
 
-    public void eliminarTren(Tren tren) {
-        boolean eliminado = listaTrenes.eliminar(tren);
+    public void eliminarTren(String id) {
+        if (id == null) {
+            throw new IllegalArgumentException("El tren no puede ser nulo.");
+        }
+        boolean eliminado = listaTrenes.eliminar(id);
         if (eliminado) {
-            System.out.println("Tren " + tren.getId() + " eliminado de la estación " + nombreEstacion + ".");
+            System.out.println("Tren " + id.getId() + " eliminado de la estación " + nombreEstacion + ".");
         } else {
-            System.out.println("El tren " + tren.getId() + " no se encuentra en la estación " + nombreEstacion + ".");
+            System.out.println("El tren " + id.getId() + " no se encuentra en la estación " + nombreEstacion + ".");
         }
     }
 
     public void agregarRuta(String idRuta, Ruta ruta) {
+        if (idRuta == null || ruta == null) {
+            throw new IllegalArgumentException("El ID de la ruta y la ruta no pueden ser nulos.");
+        }
         rutas.insertarValores(idRuta, ruta);
         System.out.println("Ruta " + idRuta + " agregada a la estación " + nombreEstacion + ".");
     }
 
     public void eliminarRuta(String idRuta) {
+        if (idRuta == null || idRuta.isEmpty()) {
+            throw new IllegalArgumentException("El ID de la ruta no puede estar vacío.");
+        }
         rutas.eliminarValores(idRuta);
         System.out.println("Ruta " + idRuta + " eliminada de la estación " + nombreEstacion + ".");
     }
@@ -80,29 +89,15 @@ public class Estacion {
         }
 
         System.out.println("Orden de abordaje en la estación " + nombreEstacion + ":");
-        Nodo<Tren> actual = listaTrenes.getCabeza();
 
-        do {
-            Tren tren = actual.getElemento();
+        for (Tren tren : listaTrenes) {
             System.out.println("Tren " + tren.getId() + ":");
-            for (int ii = 0; ii < tren.getVagones().totalElementos(); ii++) {
-                Vagon vagon = tren.getVagones().peek();
+            tren.mostrarVagones();
+        }
+    }
 
-                if (vagon instanceof VagonPasajeros) {
-                    VagonPasajeros vagonPasajeros = (VagonPasajeros) vagon;
-                    System.out.println("Vagón " + vagonPasajeros.getIdVagon() + ":");
-
-                    if (vagonPasajeros.getColaAbordaje().getCantidadElementos() == 0) {
-                        System.out.println("Este vagón no tiene pasajeros en cola.");
-                    } else {
-                        vagonPasajeros.mostrarOrdenAbordaje();
-                    }
-                } else {
-                    System.out.println("Vagón " + vagon.getIdVagon() + ": No es un vagón de pasajeros.");
-                }
-            }
-
-            actual = actual.getSiguiente();
-        } while (actual != listaTrenes.getCabeza());
+    public void mostrarRutas() {
+        System.out.println("Rutas en la estación " + nombreEstacion + ":");
+        rutas.mostrarValores();
     }
 }
