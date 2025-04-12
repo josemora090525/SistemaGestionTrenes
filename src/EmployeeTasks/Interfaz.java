@@ -1,7 +1,9 @@
 package EmployeeTasks;
 
-public interface InterfazColaPrioridad {
+public interface Interfaz {
 
     int getPrioridad(); 
+
+    String getId();
 
 }

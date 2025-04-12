@@ -1,10 +1,11 @@
 package EmployeeTasks;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 
-public class ListaDoblementeEnlazada <T>  {
-
-    private Nodo<T> cabeza; 
-    private Nodo<T> cola;   
-    private int tamanio; 
+public class ListaDoblementeEnlazada<T extends Interfaz> implements Iterable<T> {
+    private Nodo<T> cabeza;
+    private Nodo<T> cola;
+    private int tamanio;
 
     public ListaDoblementeEnlazada() {
         this.cabeza = null;
@@ -15,12 +16,12 @@ public class ListaDoblementeEnlazada <T>  {
     public void agregarAlFinal(T elemento) {
         Nodo<T> nuevoNodo = new Nodo<>(elemento);
 
-        if (cabeza == null) { 
+        if (cabeza == null) {
             cabeza = nuevoNodo;
             cola = nuevoNodo;
-        } 
-        
-        else { 
+        }
+
+        else {
             cola.setSiguiente(nuevoNodo);
             nuevoNodo.setAnterior(cola);
             cola = nuevoNodo;
@@ -28,16 +29,15 @@ public class ListaDoblementeEnlazada <T>  {
         tamanio++;
     }
 
-    
     public void agregarAlInicio(T elemento) {
         Nodo<T> nuevoNodo = new Nodo<>(elemento);
 
-        if (cabeza == null) { 
+        if (cabeza == null) {
             cabeza = nuevoNodo;
             cola = nuevoNodo;
-        } 
-        
-        else { 
+        }
+
+        else {
             nuevoNodo.setSiguiente(cabeza);
             cabeza.setAnterior(nuevoNodo);
             cabeza = nuevoNodo;
@@ -45,62 +45,58 @@ public class ListaDoblementeEnlazada <T>  {
         tamanio++;
     }
 
-    public void eliminar(T elemento) {
-        if (cabeza == null) { 
-            System.out.println("La lista esta vacia");
-            return;
+    public boolean eliminar(String id) {
+        if (cabeza == null) {
+            return false;
         }
 
         Nodo<T> actual = cabeza;
 
         while (actual != null) {
-            if (actual.getElemento().equals(elemento)) { 
-                if (actual == cabeza) { 
+            if (actual.getElemento().getId().equals(id)) {
+                if (actual == cabeza) {
                     cabeza = cabeza.getSiguiente();
                     if (cabeza != null) {
                         cabeza.setAnterior(null);
-                    } 
-                    
-                    else { 
+                    } else {
                         cola = null;
                     }
-                } 
-                
-                else if (actual == cola) { 
+                }
+
+                else if (actual == cola) {
                     cola = cola.getAnterior();
-                    cola.setSiguiente(null);
-                } 
-                
-                else { 
+                    if (cola != null) {
+                        cola.setSiguiente(null);
+                    }
+                }
+
+                else {
                     actual.getAnterior().setSiguiente(actual.getSiguiente());
                     actual.getSiguiente().setAnterior(actual.getAnterior());
                 }
                 tamanio--;
-                return;
+                return true;
             }
             actual = actual.getSiguiente();
         }
+        return false;
     }
 
-    public Nodo<T> buscar(T elemento) {
+    public T buscar(String id) {
         Nodo<T> actual = cabeza;
 
         while (actual != null) {
-            if (actual.getElemento().equals(elemento)) {
-                return actual; 
+            if (actual.getElemento().getId().equals(id)) {
+                return actual.getElemento();
             }
             actual = actual.getSiguiente();
         }
-        return null; 
+        return null;
     }
 
     public void mostrarElementos() {
-        Nodo <T> actual = cabeza;
-
-        System.out.println("Elementos en la lista doblemente enlazada:");
-        while (actual != null) {
-            System.out.println(actual.getElemento()); 
-            actual = actual.getSiguiente();
+        for (T elemento : this) {
+            System.out.println(elemento);
         }
     }
 
@@ -108,4 +104,25 @@ public class ListaDoblementeEnlazada <T>  {
         return tamanio;
     }
 
+    @Override
+    public Iterator<T> iterator() {
+        return new Iterator<T>() {
+            private Nodo<T> actual = cabeza;
+
+            @Override
+            public boolean hasNext() {
+                return actual != null;
+            }
+
+            @Override
+            public T next() {
+                if (!hasNext()) {
+                    throw new NoSuchElementException();
+                }
+                T elemento = actual.getElemento();
+                actual = actual.getSiguiente();
+                return elemento;
+            }
+        };
+    }
 }

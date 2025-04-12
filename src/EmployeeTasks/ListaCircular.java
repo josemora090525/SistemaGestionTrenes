@@ -1,10 +1,11 @@
 package EmployeeTasks;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 
-public class ListaCircular <T> {
-
-    private Nodo<T> cabeza; 
-    private Nodo<T> cola;   
-    private int tamanio;    
+public class ListaCircular<T extends Interfaz> implements Iterable<T> {
+    private Nodo<T> cabeza;
+    private Nodo<T> cola;
+    private int tamanio;
 
     public ListaCircular() {
         this.cabeza = null;
@@ -12,96 +13,115 @@ public class ListaCircular <T> {
         this.tamanio = 0;
     }
 
-    public void agregar(T nuevo) {
-        Nodo<T> nuevoNodo = new Nodo<>(nuevo); 
+    public Nodo<T> getCabeza() {
+        return cabeza;
+    }
 
-        if (cabeza == null) { 
+    public void agregar(T nuevo) {
+        Nodo<T> nuevoNodo = new Nodo<>(nuevo);
+
+        if (cabeza == null) {
             cabeza = nuevoNodo;
             cola = nuevoNodo;
-            nuevoNodo.setSiguiente(cabeza); 
-        } 
-        
-        else { 
-            cola.setSiguiente(nuevoNodo); 
-            nuevoNodo.setSiguiente(cabeza); 
-            cola = nuevoNodo; 
+            nuevoNodo.setSiguiente(cabeza);
+        }
+
+        else {
+            cola.setSiguiente(nuevoNodo);
+            nuevoNodo.setSiguiente(cabeza);
+            cola = nuevoNodo;
         }
         tamanio++;
     }
 
-    public void eliminar(T elemento) {
-        if (cabeza == null) { 
-            System.out.println("La lista está vacía, no hay elementos que eliminar.");
-            return;
-        }
-
-        Nodo<T> actual = cabeza;
-        Nodo<T> puntero = cola;
-
-        do {
-            if (actual.getElemento().equals(elemento)) { 
-                if (actual == cabeza) { 
-                    cabeza = cabeza.getSiguiente();
-                    cola.setSiguiente(cabeza); 
-                } 
-                
-                else if (actual == cola) { 
-                    cola = puntero;
-                    cola.setSiguiente(cabeza);
-                } 
-                
-                else { 
-                    puntero.setSiguiente(actual.getSiguiente());
-                }
-                tamanio--;
-                System.out.println("Elemento eliminado: " + elemento);
-                return;
-            }
-            
-            puntero = actual;
-            actual = actual.getSiguiente(); 
-        } while (actual != cabeza);
-
-        System.out.println("No se encontró el elemento: " + elemento);
-    }
-
-    public T buscar(T elemento) {
+    public T buscar(String id) {
         if (cabeza == null) {
-            System.out.println("La lista está vacía.");
             return null;
         }
 
         Nodo<T> actual = cabeza;
 
         do {
-            if (actual.getElemento().equals(elemento)) { 
-                System.out.println("Elemento encontrado: " + actual.getElemento());
+            if (actual.getElemento().getId().equals(id)) {
                 return actual.getElemento();
             }
-            actual = actual.getSiguiente(); 
+            actual = actual.getSiguiente();
         } while (actual != cabeza);
 
-        System.out.println("No se encontró el elemento: " + elemento);
         return null;
     }
 
-    public void mostrar() {
+    public boolean eliminar(String id) {
         if (cabeza == null) {
-            System.out.println("La lista está vacía.");
-            return;
+            return false;
         }
 
         Nodo<T> actual = cabeza;
+        Nodo<T> anterior = cola;
 
-        System.out.println("Elementos en la lista circular:");
         do {
-            System.out.println(actual.getElemento()); 
-            actual = actual.getSiguiente(); 
+            if (actual.getElemento().getId().equals(id)) {
+                if (actual == cabeza) {
+                    cabeza = cabeza.getSiguiente();
+                    cola.setSiguiente(cabeza);
+                }
+
+                else if (actual == cola) {
+                    cola = anterior;
+                    cola.setSiguiente(cabeza);
+                }
+
+                else {
+                    anterior.setSiguiente(actual.getSiguiente());
+                }
+                tamanio--;
+                return true;
+            }
+            anterior = actual;
+            actual = actual.getSiguiente();
         } while (actual != cabeza);
+
+        return false;
     }
 
     public int getTamanio() {
         return tamanio;
     }
 
+    @Override
+    public Iterator<T> iterator() {
+        return new Iterator<T>() {
+            private Nodo<T> actual = cabeza;
+            private Nodo<T> previo = null;
+            private int elementosVisitados = 0;
+
+            @Override
+            public boolean hasNext() {
+                return elementosVisitados < tamanio;
+            }
+
+            @Override
+            public T next() {
+                if (!hasNext()) {
+                    throw new NoSuchElementException();
+                }
+                T elemento = actual.getElemento();
+                previo = actual;
+                actual = actual.getSiguiente();
+                elementosVisitados++;
+                return elemento;
+            }
+
+            @Override
+            public void remove() {
+                if (previo == null || elementosVisitados == 0) {
+                    throw new IllegalStateException("Debe llamarse a next() antes de eliminar.");
+                }
+
+                ListaCircular.this.eliminar(previo.getElemento().getId());
+                elementosVisitados--;
+                previo = null;
+            }
+        };
+    }
 }
