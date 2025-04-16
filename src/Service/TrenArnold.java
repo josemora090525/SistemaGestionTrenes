@@ -1,24 +1,18 @@
 package Service;
 
-import EmployeeTasks.PilaArreglo;
+public class TrenArnold extends Tren {
 
-public class TrenArnold extends Tren{
-
-    private PilaArreglo<Vagon> pilaVagones;
-
-    public TrenArnold(String id, int capacidadCarga, int kilometraje, int maximoVagones, PilaArreglo<Vagon> pilaVagones) {
-        super(id, capacidadCarga, kilometraje, 32, pilaVagones); 
-        pilaVagones = new PilaArreglo(id, 32);
+    public TrenArnold(String id, int capacidadCarga, int kilometraje) {
+        super(id, capacidadCarga, kilometraje, 32); 
     }
 
     @Override
     public void verificarNumeroVagones() {
-        if (pilaVagones.totalElementos() > pilaVagones.getCapacidad()) {
-            System.out.println("La cantidad de vagones no es permitida.");
-        } 
-        
+        if (getVagones().getTamanio() > 32) { 
+            System.out.println("La cantidad de vagones no es permitida para TrenArnold.");
+        }   
         else {
-            System.out.println("Cantidad de vagones correcta.");
+            System.out.println("Cantidad de vagones correcta para TrenArnold.");
         }
     }
 

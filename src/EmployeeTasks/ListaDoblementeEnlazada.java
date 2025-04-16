@@ -2,7 +2,7 @@ package EmployeeTasks;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class ListaDoblementeEnlazada<T extends Interfaz> implements Iterable<T> {
+public class ListaDoblementeEnlazada<T extends InterfazID> implements Iterable<T> {
     private Nodo<T> cabeza;
     private Nodo<T> cola;
     private int tamanio;

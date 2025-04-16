@@ -2,31 +2,25 @@ package Service;
 
 public class Ruta {
 
-    private String IdRuta;
-    private String Origen;
-    private String Destino;
+    private String idRuta; 
+    private String origen;
+    private String destino;
 
-
-    
     public Ruta(String idRuta, String origen, String destino) {
-        IdRuta = idRuta;
-        Origen = origen;
-        Destino = destino;
+        this.idRuta = idRuta;
+        this.origen = origen;
+        this.destino = destino;
     }
 
     public String getIdRuta() {
-        return IdRuta;
+        return idRuta;
     }
-
-
 
     public String getOrigen() {
-        return Origen;
+        return origen;
     }
 
-
-
     public String getDestino() {
-        return Destino;
+        return destino;
     }
 }

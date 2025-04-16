@@ -1,6 +1,8 @@
 package Service;
 
-public class Equipaje {
+import EmployeeTasks.InterfazID;
+
+public class Equipaje implements InterfazID {
 
     private String idEquipaje;       
     private String idPasajero;     
@@ -11,11 +13,11 @@ public class Equipaje {
     public Equipaje(String idEquipaje, String idPasajero, double peso, String idVagonCarga) {
         this.idEquipaje = idEquipaje;
         this.idPasajero= idPasajero;
-        this.peso = validatePeso(peso); 
+        this.peso = validarPeso(peso); 
         this.idVagonCarga = idVagonCarga;
     }
 
-    private static double validatePeso(double peso) { 
+    private static double validarPeso(double peso) { 
         if (peso > MAXIMO_PESO) {
             System.out.println("El peso excede el máximo permitido (" + MAXIMO_PESO + " kg). Ajustando al máximo permitido.");
             return MAXIMO_PESO;
@@ -23,7 +25,8 @@ public class Equipaje {
         return peso; 
     }
 
-    public String getIdEquipaje() {
+    @Override
+    public String getId() {
         return idEquipaje;
     }
 
@@ -38,6 +41,4 @@ public class Equipaje {
     public String getIdVagonCarga() {
         return idVagonCarga;
     }
-    
 }
-
