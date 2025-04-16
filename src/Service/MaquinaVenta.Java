@@ -8,13 +8,11 @@ public class MaquinaVenta {
         listaBoletos = new ListaDoblementeEnlazada<>();
     }
 
-    // Agregar un boleto a la lista
     public void agregarBoleto(Boleto boleto) {
         listaBoletos.agregarAlFinal(boleto);
         System.out.println("Boleto agregado: " + boleto.getIdRegistro());
     }
 
-    // Eliminar un boleto por su ID de registro
     public void eliminarBoleto(String idRegistro) {
         Boleto boletoAEliminar = buscarBoletoPorId(idRegistro);
         if (boletoAEliminar != null) {
@@ -36,12 +34,10 @@ public class MaquinaVenta {
         }
     }
 
-    // Mostrar todos los boletos en la lista
     public void mostrarBoletos() {
         listaBoletos.mostrarElementos();
     }
 
-    // Generar un boleto de manera dinámica
     public Boleto generarBoleto(String idRegistro, String idPasajero, String nombres, String apellidos,
                                 LocalDateTime fechaHoraCompra, LocalDateTime fechaHoraSalida,
                                 LocalDateTime fechaHoraLlegada, String idTren, String lugar,
@@ -54,14 +50,12 @@ public class MaquinaVenta {
     }
 
     public Boleto venderBoleto(Boleto boleto) {
-        // Buscar el tren y horario por ID
         Tren tren = buscarTrenPorId(boleto.getIdTren());
         if (tren == null) {
             System.out.println("Tren no encontrado: " + boleto.getIdTren());
             return null;
         }
 
-        // Buscar un vagón de pasajeros con espacio
         VagonPasajeros vagonDisponible = null;
         for (Vagon vagon : tren.getVagones().totalElementos()) {
             if (vagon instanceof VagonPasajeros) {
@@ -82,7 +76,7 @@ public class MaquinaVenta {
 
         vagonDisponible.getColaAbordaje().encolar(pasajero);
 
-        System.out.println("✅ Boleto vendido a " + pasajero.getNombre() +
+        System.out.println("Boleto vendido a " + pasajero.getNombre() +
                 " - Tren: " + boleto.getIdTren() +
                 " - Salida: " + boleto.getFechaHoraSalida());
 

@@ -1,24 +1,25 @@
 package Service;
+
 import EmployeeTasks.Pila;
 
-public class VagonEquipaje extends Vagon{ 
-    
-    private Pila<Equipaje> pilaEquipaje;  
-    private double pesoActual;         
-    private int capacidadMaximaEquipaje; 
+public class VagonEquipaje extends Vagon{
+
+    private Pila<Equipaje> pilaEquipaje;
+    private double pesoActual;
+    private int capacidadMaximaEquipaje;
 
     public VagonEquipaje(String idVagon, int capacidad) {
         super(idVagon, capacidad);
-        this.pilaEquipaje = new Pila(); 
+        this.pilaEquipaje = new Pila<>();
         this.pesoActual = 0.0;
-        this.capacidadMaximaEquipaje = 2; 
+        this.capacidadMaximaEquipaje = 2;
     }
-    
+
     public void agregarEquipaje(Equipaje equipaje) {
         if (pilaEquipaje.getTamanio() < capacidadMaximaEquipaje && (pesoActual + equipaje.getPeso() <= capacidadMaximaEquipaje * 80.0)) {
             pilaEquipaje.push(equipaje);
             pesoActual += equipaje.getPeso();
-            System.out.println("Equipaje agregado al vagón: " + equipaje.getIdEquipaje());
+            System.out.println("Equipaje agregado al vagón: " + equipaje.getId());
         } else {
             System.out.println("No se puede agregar más equipaje. Capacidad o peso excedido.");
         }
@@ -28,7 +29,7 @@ public class VagonEquipaje extends Vagon{
         Equipaje equipaje = pilaEquipaje.pop();
         if (equipaje != null) {
             pesoActual -= equipaje.getPeso();
-            System.out.println("Equipaje retirado: " + equipaje.getIdEquipaje());
+            System.out.println("Equipaje retirado: " + equipaje.getId());
         }
         return equipaje;
     }

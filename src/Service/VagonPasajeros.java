@@ -62,14 +62,14 @@ public class VagonPasajeros extends Vagon{
     }
 
     public void asignarAsientos() {
-        int asientoActual = getCapacidad();
-        Pasajero pasajero;
+    int asientoActual = 1; 
+    Pasajero pasajero;
 
-        while ((pasajero = colaAbordaje.desencolar()) != null) {
-            pasajero.setNumeroAsiento(asientoActual--);
-            System.out.println("Pasajero " + pasajero.getNombre() + " asignado al asiento: " + pasajero.getNumeroAsiento());
-        }
+    while ((pasajero = colaAbordaje.desencolar()) != null) {
+        pasajero.setNumeroAsiento(asientoActual++);
+        System.out.println("Pasajero " + pasajero.getNombre() + " asignado al asiento " + pasajero.getNumeroAsiento());
     }
+}
 
     public void desencolarPasajero() {
         Pasajero pasajero = colaAbordaje.desencolar();

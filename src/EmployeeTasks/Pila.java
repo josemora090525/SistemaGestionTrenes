@@ -2,9 +2,14 @@ package EmployeeTasks;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-public class Pila<T extends Interfaz> implements Iterable<T> {
+public class Pila<T extends InterfazID> implements Iterable<T> {
     private Nodo<T> tope;
     private int tamanio;
+    private int capacidad;
+
+    public int getCapacidad() {
+        return capacidad;
+    }
 
     public Pila() {
         this.tope = null;
@@ -79,6 +84,21 @@ public class Pila<T extends Interfaz> implements Iterable<T> {
     public int getTamanio() {
         return tamanio;
     }
+    
+    public void mostrarElementos() {
+    if (tope == null) {
+        System.out.println("La pila está vacía.");
+        return;
+    }
+    
+    System.out.println("Elementos en la pila:");
+    Nodo<T> actual = tope;
+    
+    while (actual != null) {
+        System.out.println("- " + actual.getElemento().getId());
+        actual = actual.getSiguiente();
+    }
+}
 
     @Override
     public Iterator<T> iterator() {

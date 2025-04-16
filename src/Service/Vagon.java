@@ -1,7 +1,9 @@
 package Service;
 
-public class Vagon {
+import EmployeeTasks.InterfazID;
 
+public class Vagon implements InterfazID{
+    
     private String idVagon;        
     private int capacidad;            
 
@@ -10,12 +12,13 @@ public class Vagon {
         this.capacidad = capacidad;
     }
 
-    public String getIdVagon() {
+    @Override
+    public String getId(){
         return idVagon;
     }
 
     public int getCapacidad() {
         return capacidad;
     }
-    
+
 }
