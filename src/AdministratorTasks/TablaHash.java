@@ -1,5 +1,8 @@
 package AdministratorTasks;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TablaHash <K, V> {
 
     private int tamanio;
@@ -27,6 +30,16 @@ public class TablaHash <K, V> {
             indice = (indice + 1) % tamanio;
         }
         return false;
+    }
+
+    public List<K> obtenerClaves() {
+        List<K> listaClaves = new ArrayList<>();
+        for (K clave : claves) {
+            if (clave != null) {
+                listaClaves.add(clave);
+            }
+        }
+        return listaClaves;
     }
 
     public void insertarValores(K clave, V valor) {

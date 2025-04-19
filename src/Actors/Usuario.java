@@ -3,13 +3,17 @@ package Actors;
 public class Usuario {
 
     private String nombre;
+    private String apellidos;
+    private String telefono;
     private String identificacion;
     private String correo;
     private String contrasenia;
     private String rol;
 
-    public Usuario(String nombre, String identificacion, String correo, String contrasenia, String rol) {
+    public Usuario(String nombre, String apellidos, String telefono, String identificacion, String correo, String contrasenia, String rol) {
         this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.telefono = telefono;
         this.identificacion = identificacion;
         this.correo = correo;
         this.contrasenia = contrasenia;
@@ -18,6 +22,14 @@ public class Usuario {
 
     public String getNombre() {
         return nombre;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public String getTelefono() {
+        return telefono;
     }
 
     public String getIdentificacion() {
@@ -34,6 +46,11 @@ public class Usuario {
 
     public String getRol() {
         return rol;
+    }
+
+    @Override
+    public String toString() {
+        return "Usuario{" + "nombre=" + nombre + ", apellidos=" + apellidos + ", telefono=" + telefono + ", identificacion=" + identificacion + ", correo=" + correo + ", contrasenia=" + contrasenia + ", rol=" + rol + '}';
     }
     
 }

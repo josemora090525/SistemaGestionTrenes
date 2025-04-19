@@ -2,38 +2,31 @@ package EmployeeTasks;
 
 public class Arista<T> {
     
-    private Nodo<T> origen;
-    private Nodo<T> destino;
+    private int destino;
     private int distancia;
-    private boolean bidireccional; 
+    private int peso;
 
-    public Arista(Nodo<T> origen, Nodo<T> destino, int distancia, boolean bidireccional) {
-        this.origen = origen;
+	public Arista(int destino, int distancia, int peso) {
         this.destino = destino;
         this.distancia = distancia;
-        this.bidireccional = bidireccional;
+        this.peso = peso;
     }
 
-    public Nodo<T> getOrigen() {
-        return origen;
-    }
-
-    public Nodo<T> getDestino() {
+    public int getDestino() {
         return destino;
     }
 
     public int getDistancia() {
         return distancia;
     }
-
-    public boolean esBidireccional() {
-        return bidireccional;
-    }
+    
+    public int getPeso() {
+		return peso;
+	}
 
     @Override
     public String toString() {
-        return "Arista [Origen: " + origen.getElemento() + ", Destino: " + destino.getElemento() +
-               ", Distancia: " + distancia + " Km, Bidireccional: " + bidireccional + "]";
+        return "Arista [Destino: " + destino + ", Distancia: " + distancia + " km]";
     }
     
 }

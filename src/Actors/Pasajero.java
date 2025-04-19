@@ -2,24 +2,26 @@ package Actors;
 
 import EmployeeTasks.InterfazID;
 import EmployeeTasks.InterfazPrioridad;
+import java.util.Arrays;
+import java.util.List;
 
 public class Pasajero extends Usuario implements Comparable<Pasajero>, InterfazPrioridad, InterfazID{
     
-    private int prioridad;
+    private String prioridad;
     private int numeroAsiento;
     
-    public Pasajero(String nombre, String identificacion, String correo, String contraseña, String rol, int prioridad, int numeroAsiento) {
-        super(nombre, identificacion, correo, contraseña, rol);
+    public Pasajero(String nombre, String apellidos, String telefono, String identificacion, String correo, String contraseña, String rol, String prioridad, int numeroAsiento) {
+        super(nombre, apellidos, telefono, identificacion, correo, contraseña, rol);
         this.numeroAsiento = numeroAsiento;
         this.prioridad = prioridad;
     }
 
     @Override
-    public int getPrioridad() {
+    public String getPrioridad() {
         return prioridad;
     }
 
-    public void setPrioridad(int prioridad) {
+    public void setPrioridad(String prioridad) {
         this.prioridad = prioridad;
     }
 
@@ -38,18 +40,15 @@ public class Pasajero extends Usuario implements Comparable<Pasajero>, InterfazP
 
     @Override
     public int compareTo(Pasajero otro) {
-        return Integer.compare(otro.prioridad, this.prioridad); 
+        List<String> ordenPrioridades = Arrays.asList("premium", "ejecutivo", "estándar");
+
+        int thisIndex = ordenPrioridades.indexOf(this.prioridad.toLowerCase());
+        int otroIndex = ordenPrioridades.indexOf(otro.prioridad.toLowerCase());
+
+        return Integer.compare(thisIndex, otroIndex);
     }
-    
-    
-    
+
     @Override
     public String toString() {
-        return "Pasajero{" +"nombre='" + getNombre() + '\'' +", identificacion='" + getIdentificacion() + '\'' +", correo='" + getCorreo() + '\'' +
-                    ", contraseña='" + getContrasenia() + '\'' +
-                    ", rol='" + getRol() + '\'' +
-                    ", prioridad=" + prioridad +
-                    ", numeroAsiento=" + numeroAsiento +
-                    '}';
-        }
-}
+        return "Pasajero{" + "prioridad=" + prioridad + ", numeroAsiento=" + numeroAsiento + '}';
+    }
