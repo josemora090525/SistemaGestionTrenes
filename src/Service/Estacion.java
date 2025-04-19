@@ -15,11 +15,9 @@ public class Estacion implements InterfazID{
         if (idEstacion == null || idEstacion.isEmpty()) {
             throw new IllegalArgumentException("El ID de la estación no puede estar vacío.");
         }
-
         if (nombreEstacion == null || nombreEstacion.isEmpty()) {
             throw new IllegalArgumentException("El nombre de la estación no puede estar vacío.");
         }
-
         this.idEstacion = idEstacion;
         this.nombreEstacion = nombreEstacion;
         this.listaTrenes = new ListaCircular<>();
@@ -47,7 +45,6 @@ public class Estacion implements InterfazID{
         if (tren == null) {
             throw new IllegalArgumentException("El tren no puede ser nulo.");
         }
-
         listaTrenes.agregar(tren);
         System.out.println("Tren " + tren.getId() + " agregado a la estación " + nombreEstacion + ".");
     }
@@ -56,14 +53,11 @@ public class Estacion implements InterfazID{
         if (id == null || id.isEmpty()) {
             throw new IllegalArgumentException("El ID del tren no puede estar vacío.");
         }
-
         Tren trenEliminado = listaTrenes.buscar(id);
         if (trenEliminado != null) {
             listaTrenes.eliminar(id);
             System.out.println("Tren " + id + " eliminado de la estación " + nombreEstacion + ".");
-        } 
-        
-        else {
+        } else {
             System.out.println("El tren " + id + " no se encuentra en la estación " + nombreEstacion + ".");
         }
     }
@@ -72,12 +66,9 @@ public class Estacion implements InterfazID{
         if (idRuta == null || ruta == null) {
             throw new IllegalArgumentException("El ID de la ruta y la ruta no pueden ser nulos.");
         }
-
         if (rutas.contieneClave(idRuta)) {
             System.out.println("La ruta con ID " + idRuta + " ya existe.");
-        } 
-        
-        else {
+        } else {
             rutas.insertarValores(idRuta, ruta);
             System.out.println("Ruta " + idRuta + " agregada a la estación " + nombreEstacion + ".");
         }
@@ -87,13 +78,10 @@ public class Estacion implements InterfazID{
         if (idRuta == null || idRuta.isEmpty()) {
             throw new IllegalArgumentException("El ID de la ruta no puede estar vacío.");
         }
-
         if (rutas.contieneClave(idRuta)) {
             rutas.eliminarValores(idRuta);
             System.out.println("Ruta " + idRuta + " eliminada de la estación " + nombreEstacion + ".");
-        } 
-        
-        else {
+        } else {
             System.out.println("La ruta con ID " + idRuta + " no existe en la estación " + nombreEstacion + ".");
         }
     }

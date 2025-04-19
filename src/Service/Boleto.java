@@ -1,8 +1,9 @@
 package Service;
 
+import EmployeeTasks.InterfazID;
 import java.time.LocalDateTime;
 
-public class Boleto {
+public class Boleto implements InterfazID{
 
     private String IdRegistro;
     private LocalDateTime fechaHoraCompra;
@@ -25,7 +26,6 @@ public class Boleto {
     private double pesoEquipaje;
     private String IdVagonCarga;
 
-    
     public Boleto(String idRegistro, LocalDateTime fechaHoraCompra, LocalDateTime fechaHoraSalida,
             LocalDateTime fechaHorallegada, String idPasajero, String nombres, String apelllidos,
             String tipoIdentificacion, String direccion, String telefono, String idTren, String lugar,
@@ -52,10 +52,6 @@ public class Boleto {
         this.IdEquipaje = idEquipaje;
         this.pesoEquipaje = pesoEquipaje;
         this.IdVagonCarga = idVagonCarga;
-    }
-
-    public String getIdRegistro() {
-        return IdRegistro;
     }
 
     public LocalDateTime getFechaHoraCompra() {
@@ -132,6 +128,11 @@ public class Boleto {
 
     public String getIdVagonCarga() {
         return IdVagonCarga;
+    }
+
+    @Override
+    public String getId() {
+        return IdRegistro;
     }
 
 }
