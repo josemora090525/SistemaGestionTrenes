@@ -208,11 +208,53 @@
     <Compile Include="Modulo4_administrarrutas\vistas\ModificarForm1.Designer.cs">
       <DependentUpon>ModificarForm1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modulo5_agregarvagones\vistas\iniciosesionForm1.cs">
+    <Compile Include="Modulo9_vagonpasajerosyabordaje\Vistas\AgregarpasajerosForm6.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modulo5_agregarvagones\vistas\iniciosesionForm1.Designer.cs">
-      <DependentUpon>iniciosesionForm1.cs</DependentUpon>
+    <Compile Include="Modulo9_vagonpasajerosyabordaje\Vistas\AgregarpasajerosForm6.Designer.cs">
+      <DependentUpon>AgregarpasajerosForm6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo9_vagonpasajerosyabordaje\Vistas\CantidadPasajerosForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo9_vagonpasajerosyabordaje\Vistas\CantidadPasajerosForm1.Designer.cs">
+      <DependentUpon>CantidadPasajerosForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo9_vagonpasajerosyabordaje\Vistas\CrearvagonpasajeroForm5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo9_vagonpasajerosyabordaje\Vistas\CrearvagonpasajeroForm5.Designer.cs">
+      <DependentUpon>CrearvagonpasajeroForm5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo9_vagonpasajerosyabordaje\Vistas\gestionvagonpasajeroForm4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo9_vagonpasajerosyabordaje\Vistas\gestionvagonpasajeroForm4.Designer.cs">
+      <DependentUpon>gestionvagonpasajeroForm4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo9_vagonpasajerosyabordaje\Vistas\InciarSesionForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo9_vagonpasajerosyabordaje\Vistas\InciarSesionForm1.Designer.cs">
+      <DependentUpon>InciarSesionForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo9_vagonpasajerosyabordaje\Vistas\MenuForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo9_vagonpasajerosyabordaje\Vistas\MenuForm2.Designer.cs">
+      <DependentUpon>MenuForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo9_vagonpasajerosyabordaje\Vistas\ProtocoloabordajeForm7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo9_vagonpasajerosyabordaje\Vistas\ProtocoloabordajeForm7.Designer.cs">
+      <DependentUpon>ProtocoloabordajeForm7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo9_vagonpasajerosyabordaje\Vistas\VagonpasajerosForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo9_vagonpasajerosyabordaje\Vistas\VagonpasajerosForm1.Designer.cs">
+      <DependentUpon>VagonpasajerosForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -297,8 +339,29 @@
     <EmbeddedResource Include="Modulo4_administrarrutas\vistas\ModificarForm1.resx">
       <DependentUpon>ModificarForm1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modulo5_agregarvagones\vistas\iniciosesionForm1.resx">
-      <DependentUpon>iniciosesionForm1.cs</DependentUpon>
+    <EmbeddedResource Include="Modulo9_vagonpasajerosyabordaje\Vistas\AgregarpasajerosForm6.resx">
+      <DependentUpon>AgregarpasajerosForm6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo9_vagonpasajerosyabordaje\Vistas\CantidadPasajerosForm1.resx">
+      <DependentUpon>CantidadPasajerosForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo9_vagonpasajerosyabordaje\Vistas\CrearvagonpasajeroForm5.resx">
+      <DependentUpon>CrearvagonpasajeroForm5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo9_vagonpasajerosyabordaje\Vistas\gestionvagonpasajeroForm4.resx">
+      <DependentUpon>gestionvagonpasajeroForm4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo9_vagonpasajerosyabordaje\Vistas\InciarSesionForm1.resx">
+      <DependentUpon>InciarSesionForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo9_vagonpasajerosyabordaje\Vistas\MenuForm2.resx">
+      <DependentUpon>MenuForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo9_vagonpasajerosyabordaje\Vistas\ProtocoloabordajeForm7.resx">
+      <DependentUpon>ProtocoloabordajeForm7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo9_vagonpasajerosyabordaje\Vistas\VagonpasajerosForm1.resx">
+      <DependentUpon>VagonpasajerosForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
