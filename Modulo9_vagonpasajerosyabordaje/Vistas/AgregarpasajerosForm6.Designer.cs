@@ -29,10 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox17 = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -47,15 +46,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.textBox17);
             this.panel1.Controls.Add(this.label20);
@@ -81,43 +83,32 @@
             this.panel1.Size = new System.Drawing.Size(610, 511);
             this.panel1.TabIndex = 0;
             // 
-            // label4
+            // button2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(332, -2);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(166, 38);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "TransRail";
+            this.button2.BackColor = System.Drawing.Color.GreenYellow;
+            this.button2.Location = new System.Drawing.Point(239, 446);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(125, 26);
+            this.button2.TabIndex = 111;
+            this.button2.Text = "Agregar";
+            this.button2.UseVisualStyleBackColor = false;
             // 
-            // label1
+            // textBox17
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(114, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(366, 22);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Agregar los pasajeros al vagón de pasajeros";
+            this.textBox17.Enabled = false;
+            this.textBox17.Location = new System.Drawing.Point(455, 262);
+            this.textBox17.Name = "textBox17";
+            this.textBox17.Size = new System.Drawing.Size(118, 20);
+            this.textBox17.TabIndex = 110;
             // 
-            // richTextBox1
+            // label20
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(118, 47);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(439, 134);
-            this.richTextBox1.TabIndex = 34;
-            this.richTextBox1.Text = "";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(24, 87);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 35;
-            this.button1.Text = "Mostrar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(452, 246);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(114, 13);
+            this.label20.TabIndex = 109;
+            this.label20.Text = "Categoría del pasajero";
             // 
             // label11
             // 
@@ -231,32 +222,52 @@
             this.label5.TabIndex = 59;
             this.label5.Text = "Nombre";
             // 
-            // textBox17
+            // button1
             // 
-            this.textBox17.Enabled = false;
-            this.textBox17.Location = new System.Drawing.Point(455, 262);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(118, 20);
-            this.textBox17.TabIndex = 110;
+            this.button1.Location = new System.Drawing.Point(26, 85);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 35;
+            this.button1.Text = "Mostrar";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // label20
+            // richTextBox1
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(452, 246);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(114, 13);
-            this.label20.TabIndex = 109;
-            this.label20.Text = "Categoría del pasajero";
+            this.richTextBox1.Location = new System.Drawing.Point(118, 47);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(439, 134);
+            this.richTextBox1.TabIndex = 34;
+            this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
-            // button2
+            // label1
             // 
-            this.button2.BackColor = System.Drawing.Color.GreenYellow;
-            this.button2.Location = new System.Drawing.Point(239, 446);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(125, 26);
-            this.button2.TabIndex = 111;
-            this.button2.Text = "Agregar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(114, 13);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(366, 22);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Agregar los pasajeros al vagón de pasajeros";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(332, -2);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(166, 38);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "TransRail";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(26, 12);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 112;
+            this.button3.Text = "Regresar";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // AgregarpasajerosForm6
             // 
@@ -299,5 +310,6 @@
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
     }
 }

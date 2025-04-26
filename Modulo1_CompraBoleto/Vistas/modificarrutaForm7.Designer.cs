@@ -48,6 +48,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.label6);
@@ -175,7 +176,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(50, 18);
+            this.button4.Location = new System.Drawing.Point(36, 14);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 74;
@@ -188,7 +189,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(901, 539);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.panel1);
             this.Name = "modificarrutaForm7";
             this.Text = "modificarrutaForm7";

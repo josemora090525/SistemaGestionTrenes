@@ -21,5 +21,10 @@ namespace ProyectoEstructuras.Modulo1_CompraBoleto.Vistas
         {
 
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

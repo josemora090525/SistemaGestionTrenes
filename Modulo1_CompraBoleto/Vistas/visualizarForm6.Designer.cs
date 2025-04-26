@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.textBox24 = new System.Windows.Forms.TextBox();
             this.textBox23 = new System.Windows.Forms.TextBox();
             this.textBox22 = new System.Windows.Forms.TextBox();
@@ -78,7 +79,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -139,6 +139,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(679, 529);
             this.panel1.TabIndex = 0;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(590, 503);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 63;
+            this.button4.Text = "Regresar";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // textBox24
             // 
@@ -552,20 +561,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(230, 28);
+            this.label1.Location = new System.Drawing.Point(213, 31);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(223, 30);
             this.label1.TabIndex = 67;
             this.label1.Text = "Detalles del boleto";
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(590, 503);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 63;
-            this.button4.Text = "Regresar";
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // visualizarForm6
             // 

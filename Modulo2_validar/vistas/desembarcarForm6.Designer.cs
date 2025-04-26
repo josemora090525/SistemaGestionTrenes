@@ -31,6 +31,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -39,7 +40,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,6 +79,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(526, 341);
             this.panel1.TabIndex = 67;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(33, 173);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(451, 96);
+            this.richTextBox1.TabIndex = 69;
+            this.richTextBox1.Text = "";
             // 
             // button3
             // 
@@ -150,14 +158,6 @@
             this.label1.Size = new System.Drawing.Size(289, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Desembarcar Equipaje";
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(33, 173);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(451, 96);
-            this.richTextBox1.TabIndex = 69;
-            this.richTextBox1.Text = "";
             // 
             // desembarcarForm6
             // 

@@ -40,7 +40,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button3.Location = new System.Drawing.Point(65, 22);
+            this.button3.Location = new System.Drawing.Point(4, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(90, 23);
             this.button3.TabIndex = 11;
@@ -60,12 +60,13 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(165, 83);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(509, 256);
+            this.panel1.Size = new System.Drawing.Size(509, 226);
             this.panel1.TabIndex = 9;
             // 
             // label1
@@ -81,7 +82,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(272, 98);
+            this.button2.Location = new System.Drawing.Point(270, 98);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(224, 63);
             this.button2.TabIndex = 1;
@@ -104,7 +105,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(895, 538);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.Name = "monitoreoForm2";

@@ -67,7 +67,7 @@
             // 
             this.button.BackColor = System.Drawing.Color.GreenYellow;
             this.button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button.Location = new System.Drawing.Point(63, 267);
+            this.button.Location = new System.Drawing.Point(63, 271);
             this.button.Name = "button";
             this.button.Size = new System.Drawing.Size(291, 23);
             this.button.TabIndex = 13;
@@ -113,7 +113,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(149, 56);
+            this.label1.Location = new System.Drawing.Point(147, 55);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 26);
             this.label1.TabIndex = 8;

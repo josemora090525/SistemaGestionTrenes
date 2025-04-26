@@ -16,5 +16,10 @@ namespace ProyectoEstructuras.Modulo4_administrarrutas.vistas
         {
             InitializeComponent();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -37,8 +39,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +58,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(521, 385);
             this.panel1.TabIndex = 0;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(49, 187);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(413, 134);
+            this.richTextBox1.TabIndex = 25;
+            this.richTextBox1.Text = "";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Regresar";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
@@ -114,7 +131,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(53, 26);
+            this.label1.Location = new System.Drawing.Point(58, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(409, 20);
             this.label1.TabIndex = 18;
@@ -130,23 +147,6 @@
             this.label4.Size = new System.Drawing.Size(166, 38);
             this.label4.TabIndex = 16;
             this.label4.Text = "TransRail";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(3, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Regresar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(49, 187);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(413, 134);
-            this.richTextBox1.TabIndex = 25;
-            this.richTextBox1.Text = "";
             // 
             // EliminacionForm5
             // 

@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -39,7 +40,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -72,6 +72,15 @@
             this.button2.TabIndex = 12;
             this.button2.Text = "Confirmar";
             this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Regresar";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // textBox4
             // 
@@ -146,15 +155,6 @@
             this.label1.Size = new System.Drawing.Size(410, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Diligenciar la siguiente información para agregar una ruta";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Regresar";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // label4
             // 

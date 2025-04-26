@@ -94,6 +94,7 @@
             this.label1.Size = new System.Drawing.Size(121, 26);
             this.label1.TabIndex = 8;
             this.label1.Text = "Inicio Sesión";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // panel1
             // 
@@ -113,7 +114,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(318, 5);
+            this.label4.Location = new System.Drawing.Point(347, 5);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(166, 38);
             this.label4.TabIndex = 15;

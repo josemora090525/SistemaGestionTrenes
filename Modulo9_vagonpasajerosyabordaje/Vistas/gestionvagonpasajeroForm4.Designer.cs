@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,6 +51,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(656, 352);
             this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 21;
+            this.button1.Text = "Regresar";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -116,15 +125,6 @@
             this.button5.TabIndex = 20;
             this.button5.Text = "Cantidad de pasajeros en el vagón";
             this.button5.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Regresar";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // gestionvagonpasajeroForm4
             // 

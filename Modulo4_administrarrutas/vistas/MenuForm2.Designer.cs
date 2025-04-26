@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +52,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(623, 334);
             this.panel1.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 23);
+            this.button1.TabIndex = 15;
+            this.button1.Text = "Cerrar sesión";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // button5
             // 
@@ -112,16 +122,6 @@
             this.label4.Size = new System.Drawing.Size(166, 38);
             this.label4.TabIndex = 14;
             this.label4.Text = "TransRail";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 23);
-            this.button1.TabIndex = 15;
-            this.button1.Text = "Cerrar sesión";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // MenuForm2
             // 

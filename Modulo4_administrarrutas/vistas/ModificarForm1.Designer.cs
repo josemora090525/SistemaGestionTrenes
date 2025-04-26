@@ -37,8 +37,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,7 +76,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(490, 190);
+            this.button2.Location = new System.Drawing.Point(338, 120);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 29;
@@ -119,10 +119,20 @@
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Location = new System.Drawing.Point(150, 68);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(504, 383);
             this.panel1.TabIndex = 34;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "Regresar";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // label4
             // 
@@ -133,15 +143,6 @@
             this.label4.Size = new System.Drawing.Size(166, 38);
             this.label4.TabIndex = 35;
             this.label4.Text = "TransRail";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "Regresar";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // ModificarForm1
             // 
@@ -154,7 +155,6 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);

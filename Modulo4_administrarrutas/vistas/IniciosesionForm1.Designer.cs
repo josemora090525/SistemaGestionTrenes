@@ -30,12 +30,12 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.button = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,49 +65,6 @@
             this.button.Text = "Iniciar Sesión";
             this.button.UseVisualStyleBackColor = false;
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(77, 237);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(289, 20);
-            this.textBox2.TabIndex = 18;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(77, 221);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 13);
-            this.label3.TabIndex = 17;
-            this.label3.Text = "Contraseña";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(80, 160);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(286, 20);
-            this.textBox1.TabIndex = 16;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(77, 144);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(38, 13);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Correo";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.Control;
-            this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(167, 96);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 26);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Inicio Sesión";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -117,6 +74,50 @@
             this.label4.Size = new System.Drawing.Size(166, 38);
             this.label4.TabIndex = 13;
             this.label4.Text = "TransRail";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(77, 144);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(38, 13);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Correo";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(77, 237);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(289, 20);
+            this.textBox2.TabIndex = 18;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(80, 160);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(286, 20);
+            this.textBox1.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Control;
+            this.label1.Font = new System.Drawing.Font("Microsoft PhagsPa", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(164, 96);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(121, 26);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Inicio Sesión";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(77, 221);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Contraseña";
             // 
             // IniciosesionForm1
             // 

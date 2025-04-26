@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -37,7 +37,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -59,15 +59,14 @@
             this.panel1.Size = new System.Drawing.Size(601, 362);
             this.panel1.TabIndex = 0;
             // 
-            // label1
+            // button1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(50, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(505, 20);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Diligenciar la siguiente información para agregar el vagón de pasajeros";
+            this.button1.Location = new System.Drawing.Point(3, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Regresar";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -127,14 +126,15 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "ID vagón";
             // 
-            // button1
+            // label1
             // 
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Regresar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(50, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(505, 20);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Diligenciar la siguiente información para agregar el vagón de pasajeros";
             // 
             // label4
             // 

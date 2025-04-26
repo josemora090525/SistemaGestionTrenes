@@ -41,6 +41,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,6 +66,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.comboBox2);
             this.panel1.Controls.Add(this.button1);
@@ -165,6 +167,16 @@
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 20;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button3.Location = new System.Drawing.Point(3, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(90, 23);
+            this.button3.TabIndex = 20;
+            this.button3.Text = "Cerrar sesión";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // MenúViajesForm2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -198,5 +210,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button3;
     }
 }

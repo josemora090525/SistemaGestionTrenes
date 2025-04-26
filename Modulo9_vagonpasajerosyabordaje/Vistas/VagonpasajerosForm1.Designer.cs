@@ -29,16 +29,18 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.richTextBox1);
             this.panel1.Controls.Add(this.button1);
@@ -46,6 +48,34 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(560, 313);
             this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(74, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(429, 22);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "Ver el contenido de pasajeros en el vagón pasajeros";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(78, 130);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(413, 134);
+            this.richTextBox1.TabIndex = 26;
+            this.richTextBox1.Text = "";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.GreenYellow;
+            this.button1.Location = new System.Drawing.Point(198, 65);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(165, 49);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Ver los pasajeros en el vagón";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // label4
             // 
@@ -57,33 +87,14 @@
             this.label4.TabIndex = 15;
             this.label4.Text = "TransRail";
             // 
-            // button1
+            // button2
             // 
-            this.button1.BackColor = System.Drawing.Color.GreenYellow;
-            this.button1.Location = new System.Drawing.Point(197, 55);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(165, 49);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Ver los pasajeros en el vagón";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(78, 130);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(413, 134);
-            this.richTextBox1.TabIndex = 26;
-            this.richTextBox1.Text = "";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(74, 18);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(429, 22);
-            this.label1.TabIndex = 27;
-            this.label1.Text = "Ver el contenido de pasajeros en el vagón pasajeros";
+            this.button2.Location = new System.Drawing.Point(3, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 28;
+            this.button2.Text = "Regresar";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // VagonpasajerosForm1
             // 
@@ -109,5 +120,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.Button button2;
     }
 }

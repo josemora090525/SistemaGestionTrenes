@@ -30,6 +30,7 @@
         {
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -39,7 +40,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +58,7 @@
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Controls.Add(this.richTextBox1);
             this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.textBox1);
@@ -69,6 +70,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(523, 364);
             this.panel1.TabIndex = 67;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(45, 188);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(439, 125);
+            this.richTextBox1.TabIndex = 23;
+            this.richTextBox1.Text = "";
             // 
             // button2
             // 
@@ -143,20 +152,12 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(81, 9);
+            this.button4.Location = new System.Drawing.Point(3, 3);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 66;
             this.button4.Text = "Regresar";
             this.button4.UseVisualStyleBackColor = true;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(45, 188);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(439, 125);
-            this.richTextBox1.TabIndex = 23;
-            this.richTextBox1.Text = "";
             // 
             // embarcarForm4
             // 
@@ -166,7 +167,6 @@
             this.ClientSize = new System.Drawing.Size(839, 579);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button4);
             this.Name = "embarcarForm4";
             this.Text = "embarcarForm4";
             this.panel1.ResumeLayout(false);
