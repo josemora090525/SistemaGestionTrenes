@@ -80,7 +80,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(128, 60);
             this.button5.TabIndex = 4;
-            this.button5.Text = "Mostrar tren";
+            this.button5.Text = "Modificar tren";
             this.button5.UseVisualStyleBackColor = true;
             // 
             // button4

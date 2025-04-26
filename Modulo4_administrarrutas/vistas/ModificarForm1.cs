@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProyectoEstructuras.Modulo4_administrarrutas.vistas
 {
-    public partial class mostrarForm6 : Form
+    public partial class ModificarForm1 : Form
     {
-        public mostrarForm6()
+        public ModificarForm1()
         {
             InitializeComponent();
         }

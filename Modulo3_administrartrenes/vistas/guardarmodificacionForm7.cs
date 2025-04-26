@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoEstructuras.Modulo4_administrarrutas.vistas
+namespace ProyectoEstructuras.Modulo3_administrartrenes.vistas
 {
-    public partial class busquedaForm4 : Form
+    public partial class guardarmodificacionForm7 : Form
     {
-        public busquedaForm4()
+        public guardarmodificacionForm7()
         {
             InitializeComponent();
-        }
-
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -32,14 +32,14 @@
             this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.listBox4 = new System.Windows.Forms.ListBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,14 +49,14 @@
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.listBox4);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.listBox2);
-            this.panel1.Controls.Add(this.listBox1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.listBox3);
+            this.panel1.Controls.Add(this.richTextBox1);
+            this.panel1.Controls.Add(this.richTextBox2);
+            this.panel1.Controls.Add(this.richTextBox3);
+            this.panel1.Controls.Add(this.richTextBox4);
             this.panel1.Location = new System.Drawing.Point(76, 70);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(686, 406);
@@ -92,15 +92,6 @@
             this.button2.Text = "Comprar";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // listBox4
-            // 
-            this.listBox4.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.Location = new System.Drawing.Point(357, 273);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(298, 108);
-            this.listBox4.TabIndex = 30;
-            // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(32, 5);
@@ -119,24 +110,6 @@
             this.button1.TabIndex = 27;
             this.button1.Text = "Comprar";
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // listBox2
-            // 
-            this.listBox2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(357, 137);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(298, 108);
-            this.listBox2.TabIndex = 26;
-            // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(32, 137);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(298, 108);
-            this.listBox1.TabIndex = 25;
             // 
             // label2
             // 
@@ -158,14 +131,37 @@
             this.label4.TabIndex = 23;
             this.label4.Text = "TransRail";
             // 
-            // listBox3
+            // richTextBox1
             // 
-            this.listBox3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.Location = new System.Drawing.Point(32, 273);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(298, 108);
-            this.listBox3.TabIndex = 29;
+            this.richTextBox1.Location = new System.Drawing.Point(32, 273);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(298, 108);
+            this.richTextBox1.TabIndex = 34;
+            this.richTextBox1.Text = "";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Location = new System.Drawing.Point(32, 137);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(298, 108);
+            this.richTextBox2.TabIndex = 35;
+            this.richTextBox2.Text = "";
+            // 
+            // richTextBox3
+            // 
+            this.richTextBox3.Location = new System.Drawing.Point(357, 137);
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.Size = new System.Drawing.Size(298, 108);
+            this.richTextBox3.TabIndex = 36;
+            this.richTextBox3.Text = "";
+            // 
+            // richTextBox4
+            // 
+            this.richTextBox4.Location = new System.Drawing.Point(357, 273);
+            this.richTextBox4.Name = "richTextBox4";
+            this.richTextBox4.Size = new System.Drawing.Size(298, 108);
+            this.richTextBox4.TabIndex = 37;
+            this.richTextBox4.Text = "";
             // 
             // ListaviajesForm3
             // 
@@ -188,13 +184,13 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.ListBox listBox4;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.RichTextBox richTextBox4;
     }
 }

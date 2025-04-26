@@ -31,13 +31,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,8 +63,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.richTextBox1);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.listBox1);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label3);
@@ -74,6 +74,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(552, 398);
             this.panel1.TabIndex = 13;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.GreenYellow;
+            this.button2.Location = new System.Drawing.Point(330, 97);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Buscar";
+            this.button2.UseVisualStyleBackColor = false;
             // 
             // textBox2
             // 
@@ -117,25 +127,13 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Diligenciar la siguiente información para buscar un tren";
             // 
-            // listBox1
+            // richTextBox1
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Items.AddRange(new object[] {
-            "Información del tren "});
-            this.listBox1.Location = new System.Drawing.Point(53, 168);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(450, 199);
-            this.listBox1.TabIndex = 8;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.GreenYellow;
-            this.button2.Location = new System.Drawing.Point(330, 97);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Buscar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.richTextBox1.Location = new System.Drawing.Point(55, 170);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(450, 199);
+            this.richTextBox1.TabIndex = 10;
+            this.richTextBox1.Text = "";
             // 
             // buscarForm4
             // 
@@ -165,7 +163,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }

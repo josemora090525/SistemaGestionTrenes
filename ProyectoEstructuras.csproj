@@ -142,6 +142,12 @@
     <Compile Include="Modulo3_administrartrenes\vistas\eliminarForm5.Designer.cs">
       <DependentUpon>eliminarForm5.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulo3_administrartrenes\vistas\guardarmodificacionForm7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo3_administrartrenes\vistas\guardarmodificacionForm7.Designer.cs">
+      <DependentUpon>guardarmodificacionForm7.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulo3_administrartrenes\vistas\iniciarsesionForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,11 +160,11 @@
     <Compile Include="Modulo3_administrartrenes\vistas\menuForm2.Designer.cs">
       <DependentUpon>menuForm2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modulo3_administrartrenes\vistas\mostrarForm6.cs">
+    <Compile Include="Modulo3_administrartrenes\vistas\modificarForm6.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modulo3_administrartrenes\vistas\mostrarForm6.Designer.cs">
-      <DependentUpon>mostrarForm6.cs</DependentUpon>
+    <Compile Include="Modulo3_administrartrenes\vistas\modificarForm6.Designer.cs">
+      <DependentUpon>modificarForm6.cs</DependentUpon>
     </Compile>
     <Compile Include="Modulo4_administrarrutas\vistas\AgregarForm3.cs">
       <SubType>Form</SubType>
@@ -178,6 +184,12 @@
     <Compile Include="Modulo4_administrarrutas\vistas\EliminacionForm5.Designer.cs">
       <DependentUpon>EliminacionForm5.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulo4_administrarrutas\vistas\guardarmodificacionForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo4_administrarrutas\vistas\guardarmodificacionForm1.Designer.cs">
+      <DependentUpon>guardarmodificacionForm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulo4_administrarrutas\vistas\IniciosesionForm1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,11 +202,11 @@
     <Compile Include="Modulo4_administrarrutas\vistas\MenuForm2.Designer.cs">
       <DependentUpon>MenuForm2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modulo4_administrarrutas\vistas\mostrarForm6.cs">
+    <Compile Include="Modulo4_administrarrutas\vistas\ModificarForm1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modulo4_administrarrutas\vistas\mostrarForm6.Designer.cs">
-      <DependentUpon>mostrarForm6.cs</DependentUpon>
+    <Compile Include="Modulo4_administrarrutas\vistas\ModificarForm1.Designer.cs">
+      <DependentUpon>ModificarForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="Modulo5_agregarvagones\vistas\iniciosesionForm1.cs">
       <SubType>Form</SubType>
@@ -252,14 +264,17 @@
     <EmbeddedResource Include="Modulo3_administrartrenes\vistas\eliminarForm5.resx">
       <DependentUpon>eliminarForm5.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modulo3_administrartrenes\vistas\guardarmodificacionForm7.resx">
+      <DependentUpon>guardarmodificacionForm7.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modulo3_administrartrenes\vistas\iniciarsesionForm1.resx">
       <DependentUpon>iniciarsesionForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulo3_administrartrenes\vistas\menuForm2.resx">
       <DependentUpon>menuForm2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modulo3_administrartrenes\vistas\mostrarForm6.resx">
-      <DependentUpon>mostrarForm6.cs</DependentUpon>
+    <EmbeddedResource Include="Modulo3_administrartrenes\vistas\modificarForm6.resx">
+      <DependentUpon>modificarForm6.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulo4_administrarrutas\vistas\AgregarForm3.resx">
       <DependentUpon>AgregarForm3.cs</DependentUpon>
@@ -270,14 +285,17 @@
     <EmbeddedResource Include="Modulo4_administrarrutas\vistas\EliminacionForm5.resx">
       <DependentUpon>EliminacionForm5.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modulo4_administrarrutas\vistas\guardarmodificacionForm1.resx">
+      <DependentUpon>guardarmodificacionForm1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modulo4_administrarrutas\vistas\IniciosesionForm1.resx">
       <DependentUpon>IniciosesionForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulo4_administrarrutas\vistas\MenuForm2.resx">
       <DependentUpon>MenuForm2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modulo4_administrarrutas\vistas\mostrarForm6.resx">
-      <DependentUpon>mostrarForm6.cs</DependentUpon>
+    <EmbeddedResource Include="Modulo4_administrarrutas\vistas\ModificarForm1.resx">
+      <DependentUpon>ModificarForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulo5_agregarvagones\vistas\iniciosesionForm1.resx">
       <DependentUpon>iniciosesionForm1.cs</DependentUpon>

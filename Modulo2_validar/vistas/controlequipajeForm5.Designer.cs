@@ -39,7 +39,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(208, 32);
+            this.button3.Location = new System.Drawing.Point(3, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 70;
@@ -59,6 +59,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label1);
@@ -103,7 +104,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(940, 554);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.Name = "controlequipajeForm5";
