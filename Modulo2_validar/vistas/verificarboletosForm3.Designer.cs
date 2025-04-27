@@ -30,6 +30,7 @@
         {
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -38,7 +39,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +57,7 @@
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Controls.Add(this.richTextBox1);
             this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.textBox1);
@@ -67,6 +68,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(535, 354);
             this.panel1.TabIndex = 66;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(61, 145);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(418, 160);
+            this.richTextBox1.TabIndex = 22;
+            this.richTextBox1.Text = "";
             // 
             // button2
             // 
@@ -105,7 +114,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(59, 15);
+            this.label3.Location = new System.Drawing.Point(84, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(389, 25);
             this.label3.TabIndex = 16;
@@ -131,20 +140,12 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(107, 28);
+            this.button4.Location = new System.Drawing.Point(3, 3);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 65;
             this.button4.Text = "Regresar";
             this.button4.UseVisualStyleBackColor = true;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(61, 145);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(418, 160);
-            this.richTextBox1.TabIndex = 22;
-            this.richTextBox1.Text = "";
             // 
             // verificarboletosForm3
             // 
@@ -154,7 +155,6 @@
             this.ClientSize = new System.Drawing.Size(800, 564);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button4);
             this.Name = "verificarboletosForm3";
             this.Text = "verificarboletosForm3";
             this.panel1.ResumeLayout(false);

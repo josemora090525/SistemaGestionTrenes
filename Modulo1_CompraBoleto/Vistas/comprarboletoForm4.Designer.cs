@@ -181,7 +181,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(180, 23);
             this.button1.TabIndex = 69;
-            this.button1.Text = "Comprar";
+            this.button1.Text = "Siguiente";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // textBox13

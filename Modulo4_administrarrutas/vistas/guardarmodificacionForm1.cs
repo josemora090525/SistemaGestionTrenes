@@ -16,5 +16,10 @@ namespace ProyectoEstructuras.Modulo4_administrarrutas.vistas
         {
             InitializeComponent();
         }
+
+        private void guardarmodificacionForm1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

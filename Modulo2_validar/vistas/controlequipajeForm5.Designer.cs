@@ -71,7 +71,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(341, 96);
+            this.button2.Location = new System.Drawing.Point(320, 96);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(113, 85);
             this.button2.TabIndex = 2;
@@ -81,7 +81,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(49, 96);
+            this.button1.Location = new System.Drawing.Point(72, 96);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(118, 85);
             this.button1.TabIndex = 1;
@@ -92,11 +92,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(155, 21);
+            this.label1.Location = new System.Drawing.Point(84, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 26);
+            this.label1.Size = new System.Drawing.Size(378, 26);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Control de equipaje";
+            this.label1.Text = "Control de equipaje al vagón de carga";
             // 
             // controlequipajeForm5
             // 

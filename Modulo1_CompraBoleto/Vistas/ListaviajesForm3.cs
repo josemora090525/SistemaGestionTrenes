@@ -16,5 +16,10 @@ namespace ProyectoEstructuras.Modulo1_CompraBoleto.Vistas
         {
             InitializeComponent();
         }
+
+        private void ListaviajesForm3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
