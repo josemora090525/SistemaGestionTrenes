@@ -48,31 +48,30 @@
   <ItemGroup>
     <Compile Include="Códigos\Actores\Administrador.cs" />
     <Compile Include="Códigos\Actores\Empleado.cs" />
-    <Compile Include="Códigos\Actores\Pasajero.cs" />
-    <Compile Include="Códigos\Actores\Usuario.cs" />
+    <Compile Include="Modulo1_CompraBoleto\ClasesControladoras\Pasajero.cs" />
+    <Compile Include="Modulo1_CompraBoleto\ClasesControladoras\Usuario.cs" />
     <Compile Include="Códigos\Servicio\Boleto.cs" />
     <Compile Include="Códigos\Servicio\Equipaje.cs" />
-    <Compile Include="Códigos\Servicio\Estacion.cs" />
+    <Compile Include="Modulo7_calcularestaciones\Clasescontroladoras\Estacion.cs" />
     <Compile Include="Códigos\Servicio\MaquinaVenta.cs" />
-    <Compile Include="Códigos\Servicio\Ruta.cs" />
     <Compile Include="Datos.cs" />
     <Compile Include="Modulo3_administrartrenes\ClasesControladoras3\Tren.cs" />
     <Compile Include="Modulo3_administrartrenes\ClasesControladoras3\TrenArnold.cs" />
-    <Compile Include="Códigos\Servicio\Vagon.cs" />
-    <Compile Include="Códigos\Servicio\VagonCarga.cs" />
-    <Compile Include="Códigos\Servicio\VagonPasajero.cs" />
+    <Compile Include="Modulo5_vagones\Clases\Vagon.cs" />
+    <Compile Include="Modulo5_vagones\Clases\VagonCarga.cs" />
+    <Compile Include="Modulo5_vagones\Clases\VagonPasajero.cs" />
     <Compile Include="Códigos\Autenticación\SistemaAutenticacion.cs" />
     <Compile Include="Códigos\TareasAdministrador\TablaHash.cs" />
-    <Compile Include="Códigos\TareasEmpleado\Arista.cs" />
+    <Compile Include="Modulo7_calcularestaciones\Clasescontroladoras\Arista.cs" />
     <Compile Include="Códigos\TareasEmpleado\ColaPrioridad.cs" />
-    <Compile Include="Códigos\TareasEmpleado\Grafos.cs" />
+    <Compile Include="Modulo7_calcularestaciones\Clasescontroladoras\Grafos.cs" />
     <Compile Include="Códigos\TareasEmpleado\InterfazID.cs" />
     <Compile Include="Códigos\TareasEmpleado\InterfazPrioridad.cs" />
     <Compile Include="Modulo3_administrartrenes\ClasesControladoras3\ListaCircular.cs" />
     <Compile Include="Códigos\TareasEmpleado\ListaDoblementeEnlazada.cs" />
     <Compile Include="Códigos\TareasEmpleado\Nodo.cs" />
-    <Compile Include="Códigos\TareasEmpleado\Pila.cs" />
-    <Compile Include="Códigos\TareasEmpleado\PriorityQueue.cs" />
+    <Compile Include="Modulo5_vagones\Clases\Pila.cs" />
+    <Compile Include="Modulo7_calcularestaciones\Clasescontroladoras\PriorityQueue.cs" />
     <Compile Include="Códigos\TareasEmpleado\VerificarBoleto.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -80,8 +79,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modulo1_CompraBoleto\ClasesControladoras\Ruta.cs" />
-    <Compile Include="Modulo1_CompraBoleto\ClasesControladoras\Usuario.cs" />
+    <Compile Include="Modulo4_administrarrutas\ClasesControladoras4\Ruta.cs" />
     <Compile Include="Modulo2_validar\vistas\iniciarSesion2Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,12 +99,17 @@
     <Compile Include="Modulo3_administrartrenes\vistas\modificartrenForm1.Designer.cs">
       <DependentUpon>modificartrenForm1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modulo4_administrarrutas\ClasesControladoras4\ruta.cs" />
     <Compile Include="Modulo4_administrarrutas\vistas\iniciarSesion4Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modulo4_administrarrutas\vistas\iniciarSesion4Form1.Designer.cs">
       <DependentUpon>iniciarSesion4Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo5_vagones\Vistas\eliminarForm5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo5_vagones\Vistas\eliminarForm5.Designer.cs">
+      <DependentUpon>eliminarForm5.cs</DependentUpon>
     </Compile>
     <Compile Include="Modulo5_vagones\Vistas\iniciarsesion5Form1.cs">
       <SubType>Form</SubType>
@@ -114,55 +117,48 @@
     <Compile Include="Modulo5_vagones\Vistas\iniciarsesion5Form1.Designer.cs">
       <DependentUpon>iniciarsesion5Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modulo6_gestionusuarios\Vistas\agregarUsuarioForm3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo6_gestionusuarios\Vistas\agregarUsuarioForm3.Designer.cs">
+      <DependentUpon>agregarUsuarioForm3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modulo6_gestionusuarios\Vistas\copiaForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modulo6_gestionusuarios\Vistas\copiaForm1.Designer.cs">
+      <DependentUpon>copiaForm1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Modulo6_gestionusuarios\Vistas\iniciarsesion6Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Modulo6_gestionusuarios\Vistas\iniciarsesion6Form1.Designer.cs">
       <DependentUpon>iniciarsesion6Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modulo7_calculoestaciones\vistas\agregarForm4.cs">
+    <Compile Include="Modulo7_calcularestaciones\vistas\calculopasajeForm7.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modulo7_calculoestaciones\vistas\agregarForm4.Designer.cs">
-      <DependentUpon>agregarForm4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modulo7_calculoestaciones\vistas\buscarForm5.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modulo7_calculoestaciones\vistas\buscarForm5.Designer.cs">
-      <DependentUpon>buscarForm5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modulo7_calculoestaciones\vistas\calculopasajeForm7.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modulo7_calculoestaciones\vistas\calculopasajeForm7.Designer.cs">
+    <Compile Include="Modulo7_calcularestaciones\vistas\calculopasajeForm7.Designer.cs">
       <DependentUpon>calculopasajeForm7.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modulo7_calculoestaciones\vistas\eliminarForm6.cs">
+    <Compile Include="Modulo7_calcularestaciones\vistas\crearestacionesForm13.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modulo7_calculoestaciones\vistas\eliminarForm6.Designer.cs">
-      <DependentUpon>eliminarForm6.cs</DependentUpon>
+    <Compile Include="Modulo7_calcularestaciones\vistas\crearestacionesForm13.Designer.cs">
+      <DependentUpon>crearestacionesForm13.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modulo7_calculoestaciones\vistas\estacionesForm3.cs">
+    <Compile Include="Modulo7_calcularestaciones\vistas\iniciarSesion7Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modulo7_calculoestaciones\vistas\estacionesForm3.Designer.cs">
-      <DependentUpon>estacionesForm3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modulo7_calculoestaciones\vistas\iniciarSesion7Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modulo7_calculoestaciones\vistas\iniciarSesion7Form1.Designer.cs">
+    <Compile Include="Modulo7_calcularestaciones\vistas\iniciarSesion7Form1.Designer.cs">
       <DependentUpon>iniciarSesion7Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modulo7_calculoestaciones\vistas\menuForm2.cs">
+    <Compile Include="Modulo7_calcularestaciones\vistas\menuEstacionesForm2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Modulo7_calculoestaciones\vistas\menuForm2.Designer.cs">
-      <DependentUpon>menuForm2.cs</DependentUpon>
+    <Compile Include="Modulo7_calcularestaciones\vistas\menuEstacionesForm2.Designer.cs">
+      <DependentUpon>menuEstacionesForm2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modulo1_CompraBoleto\ClasesControladoras\InicioSesión.cs" />
     <Compile Include="Modulo1_CompraBoleto\Vistas\comprarboletoForm4.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -319,12 +315,6 @@
     <Compile Include="Modulo5_vagones\Vistas\buscarForm4.Designer.cs">
       <DependentUpon>buscarForm4.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modulo5_vagones\Vistas\eliminarForm5.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modulo5_vagones\Vistas\eliminarForm5.Designer.cs">
-      <DependentUpon>eliminarForm5.cs</DependentUpon>
-    </Compile>
     <Compile Include="Modulo5_vagones\Vistas\menuForm2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -336,12 +326,6 @@
     </Compile>
     <Compile Include="Modulo5_vagones\Vistas\mostrarForm6.Designer.cs">
       <DependentUpon>mostrarForm6.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Modulo6_gestionusuarios\Vistas\agregarusuariosForm1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modulo6_gestionusuarios\Vistas\agregarusuariosForm1.Designer.cs">
-      <DependentUpon>agregarusuariosForm1.cs</DependentUpon>
     </Compile>
     <Compile Include="Modulo6_gestionusuarios\Vistas\buscarusersForm4.cs">
       <SubType>Form</SubType>
@@ -426,32 +410,32 @@
     <EmbeddedResource Include="Modulo4_administrarrutas\vistas\iniciarSesion4Form1.resx">
       <DependentUpon>iniciarSesion4Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modulo5_vagones\Vistas\eliminarForm5.resx">
+      <DependentUpon>eliminarForm5.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Modulo5_vagones\Vistas\iniciarsesion5Form1.resx">
       <DependentUpon>iniciarsesion5Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo6_gestionusuarios\Vistas\agregarUsuarioForm3.resx">
+      <DependentUpon>agregarUsuarioForm3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modulo6_gestionusuarios\Vistas\copiaForm1.resx">
+      <DependentUpon>copiaForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulo6_gestionusuarios\Vistas\iniciarsesion6Form1.resx">
       <DependentUpon>iniciarsesion6Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modulo7_calculoestaciones\vistas\agregarForm4.resx">
-      <DependentUpon>agregarForm4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modulo7_calculoestaciones\vistas\buscarForm5.resx">
-      <DependentUpon>buscarForm5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modulo7_calculoestaciones\vistas\calculopasajeForm7.resx">
+    <EmbeddedResource Include="Modulo7_calcularestaciones\vistas\calculopasajeForm7.resx">
       <DependentUpon>calculopasajeForm7.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modulo7_calculoestaciones\vistas\eliminarForm6.resx">
-      <DependentUpon>eliminarForm6.cs</DependentUpon>
+    <EmbeddedResource Include="Modulo7_calcularestaciones\vistas\crearestacionesForm13.resx">
+      <DependentUpon>crearestacionesForm13.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modulo7_calculoestaciones\vistas\estacionesForm3.resx">
-      <DependentUpon>estacionesForm3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modulo7_calculoestaciones\vistas\iniciarSesion7Form1.resx">
+    <EmbeddedResource Include="Modulo7_calcularestaciones\vistas\iniciarSesion7Form1.resx">
       <DependentUpon>iniciarSesion7Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modulo7_calculoestaciones\vistas\menuForm2.resx">
-      <DependentUpon>menuForm2.cs</DependentUpon>
+    <EmbeddedResource Include="Modulo7_calcularestaciones\vistas\menuEstacionesForm2.resx">
+      <DependentUpon>menuEstacionesForm2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulo1_CompraBoleto\Vistas\comprarboletoForm4.resx">
       <DependentUpon>comprarboletoForm4.cs</DependentUpon>
@@ -531,17 +515,11 @@
     <EmbeddedResource Include="Modulo5_vagones\Vistas\buscarForm4.resx">
       <DependentUpon>buscarForm4.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Modulo5_vagones\Vistas\eliminarForm5.resx">
-      <DependentUpon>eliminarForm5.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Modulo5_vagones\Vistas\menuForm2.resx">
       <DependentUpon>menuForm2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulo5_vagones\Vistas\mostrarForm6.resx">
       <DependentUpon>mostrarForm6.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modulo6_gestionusuarios\Vistas\agregarusuariosForm1.resx">
-      <DependentUpon>agregarusuariosForm1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Modulo6_gestionusuarios\Vistas\buscarusersForm4.resx">
       <DependentUpon>buscarusersForm4.cs</DependentUpon>
@@ -601,6 +579,8 @@
   <ItemGroup>
     <Content Include=".gitignore" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Modulo2_validar\ClasesModulares2\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

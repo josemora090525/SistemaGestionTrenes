@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoEstructuras.Códigos.TareasEmpleado
 {
-    public class ListaCircular<T> where T : InterfazID
+    public class ListaCircular<T> : IEnumerable<T> where T : InterfazID
     {
         private Nodo<T> cabeza;
         private Nodo<T> cola;
@@ -54,7 +55,7 @@ namespace ProyectoEstructuras.Códigos.TareasEmpleado
 
             do
             {
-                if (actual.Elemento.GetId().Equals(id))
+                if (actual.Elemento.GetId().Trim().Equals(id.Trim(), StringComparison.OrdinalIgnoreCase))
                 {
                     return actual.Elemento;
                 }
@@ -108,7 +109,7 @@ namespace ProyectoEstructuras.Códigos.TareasEmpleado
         {
             if (cabeza == null)
             {
-                return false; 
+                return false;
             }
 
             Nodo<T> actual = cabeza;
@@ -123,8 +124,31 @@ namespace ProyectoEstructuras.Códigos.TareasEmpleado
                 actual = actual.Siguiente;
             } while (actual != cabeza);
 
-            return false; 
+            return false;
         }
 
+        public IEnumerator<T> GetEnumerator()
+        {
+            if (cabeza == null)
+            {
+                yield break; // Devolver un iterador vacío si la lista está vacía
+            }
+
+            Nodo<T> actual = cabeza;
+            int elementosCedidos = 0; // Contador para saber cuántos elementos hemos "devuelto"
+
+            // El bucle debe ejecutarse exactamente Tamanio veces para visitar cada nodo una vez
+            while (elementosCedidos < tamanio)
+            {
+                yield return actual.Elemento;
+                actual = actual.Siguiente;
+                elementosCedidos++;
+            }
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
     }
 }

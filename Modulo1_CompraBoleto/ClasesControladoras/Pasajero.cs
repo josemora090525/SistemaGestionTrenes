@@ -20,8 +20,8 @@ namespace ProyectoEstructuras.Códigos.Actores
         public string GetPrioridad() { return Prioridad; }
         public string GetId() { return Identificacion; }
 
-        public Pasajero(string nombre, string apellidos, string telefono, string identificacion, string correo, string contrasenia, string rol, string prioridad, int numeroAsiento)
-            : base(nombre, apellidos, telefono, identificacion, correo, contrasenia, rol)
+        public Pasajero(string nombre, string apellidos, string telefono, string identificacion, string numeroIdentificacion, string correo, string contrasenia, string rol)
+            : base(nombre, apellidos, telefono, identificacion, numeroIdentificacion, correo, contrasenia, rol)
         {
             this.Prioridad = prioridad;
             this.NumeroAsiento = numeroAsiento;

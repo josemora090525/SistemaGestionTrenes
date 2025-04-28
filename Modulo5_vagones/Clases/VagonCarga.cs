@@ -19,7 +19,7 @@ namespace ProyectoEstructuras.Códigos.Servicio
 
         public VagonCarga(string idVagon, int capacidad) : base(idVagon, capacidad)
         {
-            this.pilaEquipaje = new Pila<Equipaje>();
+            this.pilaEquipaje = new Pila<Equipaje>(this.capacidadMaximaEquipaje);
             this.pesoActual = 0.0;
             this.capacidadMaximaEquipaje = 2;
         }

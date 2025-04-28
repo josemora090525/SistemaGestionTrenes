@@ -24,8 +24,14 @@ namespace ProyectoEstructuras
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new Form1());
             Application.Run(new Iniciarsesion3Form1());
+            //Application.Run(new iniciarSesion4Form1());
+            //Application.Run(new iniciarsesion5Form1());
+            //Application.Run(new iniciarsesion6Form1());
+            //Application.Run(new iniciarSesion2Form1());
+            //Application.Run(new IniciarsesionForm1());
+            //Application.Run(new iniciarSesion8Form1());
+            //Application.Run(new iniciarSesion7Form1());
         }
     }
 }

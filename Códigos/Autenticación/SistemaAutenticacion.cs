@@ -9,8 +9,8 @@ namespace ProyectoEstructuras.Códigos.TareasAdministrador
 {
     public class SistemaAutenticacion<K, V> where V : class
     {
-        private TablaHash<K, V> tabla;
-        private bool sesionActiva; // Indica si hay una sesión activa.
+        private TablaHash<K, V> tabla; // Referencia a la tabla hash
+        private bool sesionActiva;     // Indica si hay una sesión activa
 
         public SistemaAutenticacion(TablaHash<K, V> tabla)
         {
@@ -18,15 +18,14 @@ namespace ProyectoEstructuras.Códigos.TareasAdministrador
             sesionActiva = false;
         }
 
-        // Intenta iniciar sesión buscando el elemento asociado a la clave y validándolo.
-        // Retorna el elemento si la validación es exitosa; de lo contrario, retorna null.
+        // Método para intentar iniciar sesión
         public V IniciarSesion(K clave, Func<V, bool> validar)
         {
             V elemento = tabla.BuscarValores(clave);
 
             if (elemento == null)
             {
-                Console.WriteLine("Clave no encontrada.");
+                Console.WriteLine($"Clave '{clave}' no encontrada.");
                 return null;
             }
             else if (!validar(elemento))
@@ -42,7 +41,7 @@ namespace ProyectoEstructuras.Códigos.TareasAdministrador
             }
         }
 
-        // Cierra la sesión si hay una activa.
+        // Método para cerrar la sesión
         public void CerrarSesion()
         {
             if (!sesionActiva)
@@ -56,6 +55,5 @@ namespace ProyectoEstructuras.Códigos.TareasAdministrador
             }
         }
     }
-
 
 }

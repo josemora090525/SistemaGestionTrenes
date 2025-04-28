@@ -16,5 +16,26 @@ namespace ProyectoEstructuras.Modulo2_validar.vistas
         {
             InitializeComponent();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            iniciarSesion2Form1 iniciarSesion = new iniciarSesion2Form1();
+            iniciarSesion.Show();
+            this.Hide();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            verificarboletosForm3 verificarBoletos = new verificarboletosForm3();
+            verificarBoletos.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            controlequipajeForm5 controlEquipaje = new controlequipajeForm5();
+            controlEquipaje.Show();
+            this.Hide();
+        }
     }
 }

@@ -118,6 +118,8 @@ namespace ProyectoEstructuras.Modulo3_administrartrenes.vistas
                 // Manejo de errores
                 MessageBox.Show($"Error al intentar eliminar el tren: {ex.Message}");
             }
+            textBox1.Clear();
+            textBox2.Clear();
         }
 
         private void eliminarForm5_Load(object sender, EventArgs e)

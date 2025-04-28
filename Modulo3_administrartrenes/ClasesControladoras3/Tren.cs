@@ -27,7 +27,7 @@ namespace ProyectoEstructuras.Códigos.Servicio
             this.id = id;
             this.capacidadVagones = maximoVagones;
             this.kilometraje = kilometraje;
-            this.pilaVagones = new Pila<Vagon>();
+            this.pilaVagones = new Pila<Vagon>(this.capacidadVagones);
         }
 
         public string GetId()

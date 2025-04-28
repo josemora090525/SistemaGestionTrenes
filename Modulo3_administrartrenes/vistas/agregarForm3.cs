@@ -106,6 +106,11 @@ namespace ProyectoEstructuras.Modulo3_administrartrenes.vistas
                 // Manejo de errores (por ejemplo, formato inválido en los TextBoxes).
                 MessageBox.Show($"Error al crear el tren: {ex.Message}");
             }
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+            comboBox1.SelectedIndex = -1;
         }
 
 

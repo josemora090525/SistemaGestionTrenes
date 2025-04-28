@@ -16,18 +16,30 @@ namespace ProyectoEstructuras.Códigos.TareasEmpleado
         public int Tamanio { get => tamanio; set => tamanio = value; }
         public int Capacidad { get => capacidad; set => capacidad = value; }
 
-        public Pila()
+        public Pila(int capacidadMaxima)
         {
+            if (capacidadMaxima < 0)
+            {
+                throw new ArgumentException("La capacidad máxima de la pila no puede ser negativa.");
+            }
             this.tope = null;
             this.tamanio = 0;
+            this.capacidad = capacidadMaxima;
         }
 
-        public void Push(T elemento)
+        public bool Push(T elemento)
         {
+            if (this.capacidad > 0 && this.tamanio >= this.capacidad)
+            {
+                Console.WriteLine("La pila de vagones está llena."); 
+                return false; 
+            }
+
             Nodo<T> nuevoNodo = new Nodo<T>(elemento);
             nuevoNodo.Siguiente = tope;
             tope = nuevoNodo;
             tamanio++;
+            return true; 
         }
 
         public T Pop()
@@ -58,17 +70,14 @@ namespace ProyectoEstructuras.Códigos.TareasEmpleado
         public T BuscarPorId(string id)
         {
             Nodo<T> actual = tope;
-
             while (actual != null)
             {
-                if (actual.Elemento.GetId().Equals(id))
+                if (actual.Elemento.GetId().Trim().Equals(id.Trim(), StringComparison.OrdinalIgnoreCase))
                 {
                     return actual.Elemento;
                 }
-
                 actual = actual.Siguiente;
             }
-
             return default;
         }
 

@@ -4,23 +4,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ProyectoEstructuras.Modulo1_CompraBoleto.ClasesControladoras
+namespace ProyectoEstructuras.Códigos.Actores
 {
     public class Usuario
     {
+        private string nombre;
+        private string apellidos;
+        private string telefono;
+        private string identificacion;
+        private string numeroIdentificacion;
         private string correo;
         private string contrasenia;
         private string rol;
 
+        public string Nombre { get => nombre; set => nombre = value; }
+        public string Apellidos { get => apellidos; set => apellidos = value; }
+        public string Telefono { get => telefono; set => telefono = value; }
+        public string Identificacion { get => identificacion; set => identificacion = value; }
         public string Correo { get => correo; set => correo = value; }
         public string Contrasenia { get => contrasenia; set => contrasenia = value; }
         public string Rol { get => rol; set => rol = value; }
+        public string NumeroIdentificacion { get => numeroIdentificacion; set => numeroIdentificacion = value; }
 
-        public Usuario(string correo, string contrasenia, string rol)
+        public Usuario(string nombre, string apellidos, string telefono, string identificacion, string numeroIdentificacion, string correo, string contrasenia, string rol)
         {
+            this.NumeroIdentificacion = numeroIdentificacion;
+            this.Nombre = nombre;
+            this.Apellidos = apellidos;
+            this.Telefono = telefono;
+            this.Identificacion = identificacion;
             this.Correo = correo;
             this.Contrasenia = contrasenia;
-            this.rol = rol;
+            this.Rol = rol;
+        }
+
+        public override string ToString()
+        {
+            return $"Usuario{{nombre={Nombre}, apellidos={Apellidos}, telefono={Telefono}, identificacion={Identificacion}, correo={Correo}, contrasenia={Contrasenia}, rol={Rol}}}";
         }
     }
 }

@@ -13,33 +13,53 @@ namespace ProyectoEstructuras.Códigos.Servicio
         private string idEstacion;
         private string nombreEstacion;
         private ListaCircular<Tren> listaTrenes;
-        private TablaHash<string, Ruta> rutas;
+        //private TablaHash<string, Ruta> rutas;
 
         public string IdEstacion { get => idEstacion; set => idEstacion = value; }
         public string NombreEstacion { get => nombreEstacion; set => nombreEstacion = value; }
         public ListaCircular<Tren> ListaTrenes { get => listaTrenes; set => listaTrenes = value; }
-        public TablaHash<string, Ruta> Rutas { get => rutas; set => rutas = value; }
+        //public TablaHash<string, Ruta> Rutas { get => rutas; set => rutas = value; }
 
         public Estacion(string idEstacion, string nombreEstacion)
         {
-            if (string.IsNullOrEmpty(idEstacion))
-            {
-                throw new ArgumentException("El ID de la estación no puede estar vacío.");
-            }
-            if (string.IsNullOrEmpty(nombreEstacion))
-            {
-                throw new ArgumentException("El nombre de la estación no puede estar vacío.");
-            }
-
-            this.idEstacion = idEstacion;
-            this.nombreEstacion = nombreEstacion;
+            this.IdEstacion = idEstacion;
+            this.NombreEstacion = nombreEstacion;
             this.listaTrenes = new ListaCircular<Tren>();
-            this.rutas = new TablaHash<string, Ruta>(33);
+            //this.rutas = new TablaHash<string, Ruta>(33);
         }
 
         public string GetId()
         {
             return IdEstacion;
+        }
+
+        public override bool Equals(object obj)
+        {
+            // Si el objeto a comparar es nulo o no es una Estacion, no son iguales.
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+
+            // Convierte el objeto a comparar a tipo Estacion.
+            Estacion otraEstacion = (Estacion)obj;
+
+            // *** La comparación se basa ÚNICAMENTE en la Identificación (IdEstacion) ***
+            // Maneja el caso de que IdEstacion sea null (aunque idealmente no debería ser null para ser clave).
+            bool sonIguales = (this.IdEstacion != null && this.IdEstacion.Equals(otraEstacion.IdEstacion));
+
+            return sonIguales; // Devuelve true si los IDs son iguales, false en caso contrario.
+        }
+
+        public override string ToString()
+        {
+            return $"Estacion [ID: {IdEstacion}, Nombre: {NombreEstacion}]";
+        }
+
+        public override int GetHashCode()
+        {
+            int hashCode = (IdEstacion != null) ? IdEstacion.GetHashCode() : 0;
+            return hashCode; // Devuelve el código hash basado en el ID.
         }
 
         public void AgregarTren(Tren tren)
@@ -72,7 +92,7 @@ namespace ProyectoEstructuras.Códigos.Servicio
             }
         }
 
-        public void AgregarRuta(string idRuta, Ruta ruta)
+        /*public void AgregarRuta(string idRuta, Ruta ruta)
         {
             if (string.IsNullOrEmpty(idRuta) || ruta == null)
             {
@@ -88,9 +108,9 @@ namespace ProyectoEstructuras.Códigos.Servicio
                 Rutas.InsertarValores(idRuta, ruta);
                 Console.WriteLine($"Ruta {idRuta} agregada a la estación {NombreEstacion}.");
             }
-        }
+        }*/
 
-        public void EliminarRuta(string idRuta)
+        /*public void EliminarRuta(string idRuta)
         {
             if (string.IsNullOrEmpty(idRuta))
             {
@@ -106,7 +126,7 @@ namespace ProyectoEstructuras.Códigos.Servicio
             {
                 Console.WriteLine($"La ruta con ID {idRuta} no existe en la estación {NombreEstacion}.");
             }
-        }
+        }*/
     }
 
 }

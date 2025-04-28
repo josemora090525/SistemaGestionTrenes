@@ -6,9 +6,9 @@ namespace ProyectoEstructuras.Códigos.Servicio
     public class Boleto : InterfazID
     {
         private string idRegistro;
-        private DateTime fechaHoraCompra;
-        private DateTime fechaHoraSalida;
-        private DateTime fechaHoraLlegada;
+        private string fechaHoraCompra;
+        private string fechaHoraSalida;
+        private string fechaHoraLlegada;
         private string idPasajero;
         private string nombres;
         private string apellidos;
@@ -27,9 +27,9 @@ namespace ProyectoEstructuras.Códigos.Servicio
         private string idVagonCarga;
 
         public string GetId() { return idRegistro; }
-        public DateTime FechaHoraCompra { get => fechaHoraCompra; set => fechaHoraCompra = value; }
-        public DateTime FechaHoraSalida { get => fechaHoraSalida; set => fechaHoraSalida = value; }
-        public DateTime FechaHoraLlegada { get => fechaHoraLlegada; set => fechaHoraLlegada = value; }
+        public string FechaHoraCompra { get => fechaHoraCompra; set => fechaHoraCompra = value; }
+        public string FechaHoraSalida { get => fechaHoraSalida; set => fechaHoraSalida = value; }
+        public string FechaHoraLlegada { get => fechaHoraLlegada; set => fechaHoraLlegada = value; }
         public string IdPasajero { get => idPasajero; set => idPasajero = value; }
         public string Nombres { get => nombres; set => nombres = value; }
         public string Apellidos { get => apellidos; set => apellidos = value; }
@@ -49,9 +49,9 @@ namespace ProyectoEstructuras.Códigos.Servicio
 
         public Boleto(
             string idRegistro,
-            DateTime fechaHoraCompra,
-            DateTime fechaHoraSalida,
-            DateTime fechaHoraLlegada,
+            string fechaHoraCompra,
+            string fechaHoraSalida,
+            string fechaHoraLlegada,
             string idPasajero,
             string nombres,
             string apellidos,

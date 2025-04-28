@@ -79,8 +79,8 @@ namespace ProyectoEstructuras.Modulo3_administrartrenes.vistas
                 // Manejo de errores
                 MessageBox.Show($"Error al buscar tren: {ex.Message}");
             }
-
-
+            textBox1.Clear();
+            textBox2.Clear();
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)

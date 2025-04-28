@@ -69,6 +69,7 @@
             this.button3.TabIndex = 29;
             this.button3.Text = "Mostrar";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // richTextBox1
             // 
@@ -77,6 +78,7 @@
             this.richTextBox1.Size = new System.Drawing.Size(434, 158);
             this.richTextBox1.TabIndex = 24;
             this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // label1
             // 
@@ -96,6 +98,7 @@
             this.button1.TabIndex = 18;
             this.button1.Text = "Regresar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // mostrarForm6
             // 

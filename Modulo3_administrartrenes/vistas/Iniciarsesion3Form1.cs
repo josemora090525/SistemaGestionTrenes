@@ -1,5 +1,6 @@
 ﻿using ProyectoEstructuras.Códigos.Actores;
 using ProyectoEstructuras.Códigos.TareasAdministrador;
+using ProyectoEstructuras.Modulo4_administrarrutas.vistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,7 @@ namespace ProyectoEstructuras.Modulo3_administrartrenes.vistas
         public Iniciarsesion3Form1()
         {
             InitializeComponent();
+
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -44,7 +46,7 @@ namespace ProyectoEstructuras.Modulo3_administrartrenes.vistas
 
             // Pre-cargamos la tabla con un empleado de ejemplo.
             // El constructor de Empleado recibe: nombre, apellidos, teléfono, identificación, correo, contraseña y rol.
-            Empleado empleadoEjemplo = new Empleado("Juan", "Pérez", "3001234567", "12345", "empleado@example.com", "pass123", "Empleado");
+            Empleado empleadoEjemplo = new Empleado("Juan", "Pérez", "3001234567", "cedula ciudadania", "102393", "empleado@example.com", "pass123", "Empleado");
             // Insertamos el empleado usando el correo como clave, ya que de ahí se realizará la búsqueda.
             tablaEmpleados.InsertarValores(empleadoEjemplo.Correo, empleadoEjemplo);
 
@@ -66,11 +68,19 @@ namespace ProyectoEstructuras.Modulo3_administrartrenes.vistas
             {
                 MessageBox.Show("Error en el inicio de sesión. Verifica tus credenciales.");
             }
+
         }
 
         private void Iniciarsesion3Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            iniciarSesion4Form1 iniciarSesion = new iniciarSesion4Form1();
+            iniciarSesion.Show();
+            this.Hide();
         }
     }
 }

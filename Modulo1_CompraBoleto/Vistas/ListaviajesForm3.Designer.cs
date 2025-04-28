@@ -71,16 +71,18 @@
             this.button5.TabIndex = 33;
             this.button5.Text = "Comprar";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.GreenYellow;
-            this.button3.Location = new System.Drawing.Point(571, 213);
+            this.button3.Location = new System.Drawing.Point(571, 197);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 32;
             this.button3.Text = "Comprar";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -91,6 +93,7 @@
             this.button2.TabIndex = 31;
             this.button2.Text = "Comprar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button4
             // 
@@ -100,22 +103,24 @@
             this.button4.TabIndex = 28;
             this.button4.Text = "Regresar";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.GreenYellow;
-            this.button1.Location = new System.Drawing.Point(248, 213);
+            this.button1.Location = new System.Drawing.Point(248, 197);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 27;
             this.button1.Text = "Comprar";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft PhagsPa", 15F);
-            this.label2.Location = new System.Drawing.Point(300, 108);
+            this.label2.Location = new System.Drawing.Point(300, 66);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 26);
             this.label2.TabIndex = 24;
@@ -133,33 +138,33 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(32, 273);
+            this.richTextBox1.Location = new System.Drawing.Point(32, 240);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(298, 108);
+            this.richTextBox1.Size = new System.Drawing.Size(298, 141);
             this.richTextBox1.TabIndex = 34;
             this.richTextBox1.Text = "";
             // 
             // richTextBox2
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(32, 137);
+            this.richTextBox2.Location = new System.Drawing.Point(32, 95);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(298, 108);
+            this.richTextBox2.Size = new System.Drawing.Size(298, 125);
             this.richTextBox2.TabIndex = 35;
             this.richTextBox2.Text = "";
             // 
             // richTextBox3
             // 
-            this.richTextBox3.Location = new System.Drawing.Point(357, 137);
+            this.richTextBox3.Location = new System.Drawing.Point(357, 95);
             this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(298, 108);
+            this.richTextBox3.Size = new System.Drawing.Size(298, 125);
             this.richTextBox3.TabIndex = 36;
             this.richTextBox3.Text = "";
             // 
             // richTextBox4
             // 
-            this.richTextBox4.Location = new System.Drawing.Point(357, 273);
+            this.richTextBox4.Location = new System.Drawing.Point(357, 240);
             this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(298, 108);
+            this.richTextBox4.Size = new System.Drawing.Size(298, 141);
             this.richTextBox4.TabIndex = 37;
             this.richTextBox4.Text = "";
             // 

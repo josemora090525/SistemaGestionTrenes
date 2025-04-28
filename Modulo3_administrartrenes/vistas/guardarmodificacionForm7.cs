@@ -113,7 +113,11 @@ namespace ProyectoEstructuras.Modulo3_administrartrenes.vistas
             {
                 MessageBox.Show($"Ocurrió un error: {ex.Message}");
             }
-
+            textBox1.Clear();
+            textBox2.Clear();
+            textBox3.Clear();
+            textBox4.Clear();
+            comboBox1.SelectedIndex = -1;
 
         }
 

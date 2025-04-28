@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoEstructuras.Modulo10_calculoestaciones.vistas
+namespace ProyectoEstructuras.Modulo6_gestionusuarios.Vistas
 {
-    public partial class eliminarForm6 : Form
+    public partial class copiaForm1 : Form
     {
-        public eliminarForm6()
+        public copiaForm1()
         {
             InitializeComponent();
         }

@@ -72,6 +72,7 @@
             this.button5.TabIndex = 17;
             this.button5.Text = "Mostrar vagones";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button1
             // 
@@ -82,6 +83,7 @@
             this.button1.TabIndex = 16;
             this.button1.Text = "Cerrar sesión";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button4
             // 
@@ -92,6 +94,7 @@
             this.button4.TabIndex = 16;
             this.button4.Text = "Eliminar vagón";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label1
             // 
@@ -112,6 +115,7 @@
             this.button3.TabIndex = 15;
             this.button3.Text = "Buscar vagón";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -122,13 +126,14 @@
             this.button2.TabIndex = 14;
             this.button2.Text = "Agregar vagón";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // menuForm2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 533);
+            this.ClientSize = new System.Drawing.Size(806, 533);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.panel1);
             this.Name = "menuForm2";

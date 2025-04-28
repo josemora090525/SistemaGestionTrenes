@@ -1,6 +1,8 @@
 ﻿using ProyectoEstructuras.Códigos.Actores;
 using ProyectoEstructuras.Códigos.TareasAdministrador;
-using ProyectoEstructuras.Modulo7_calculoestaciones.vistas;
+using ProyectoEstructuras.Modulo1_CompraBoleto.Vistas;
+using ProyectoEstructuras.Modulo10_calculoestaciones.vistas;
+using ProyectoEstructuras.Modulo7_calcularestaciones.vistas;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,13 +13,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ProyectoEstructuras.Modulo6_gestionusuarios.Vistas
+namespace ProyectoEstructuras.Modulo7_calculoestaciones.vistas
 {
-    public partial class iniciarsesion6Form1 : Form
+    public partial class iniciarSesion7Form1 : Form
     {
-        public iniciarsesion6Form1()
+        public iniciarSesion7Form1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            IniciarsesionForm1 iniciarsesionForm1 = new IniciarsesionForm1();
+            iniciarsesionForm1.Show();
+            this.Hide();
         }
 
         private void button_Click(object sender, EventArgs e)
@@ -31,7 +40,7 @@ namespace ProyectoEstructuras.Modulo6_gestionusuarios.Vistas
             // Pre-cargamos la tabla con un administrador de ejemplo.
             // Se asume que el constructor de la clase Administrador es:
             // public Administrador(string nombre, string apellidos, string telefono, string identificacion, string correo, string contrasenia)
-            Administrador adminEjemplo = new Administrador("Jose", "Mora", "3005554444", "cedula ciudadania", "12345", "admin.com", "admin");
+            Administrador adminEjemplo = new Administrador("Diego", "Ramirez", "3005554444", "cedula ciudadania", "12345", "admin@empresa.com", "adminpass123");
             // Insertamos el administrador usando su correo como clave (el que se usará para la búsqueda).
             tablaAdministradores.InsertarValores(adminEjemplo.Correo, adminEjemplo);
 
@@ -49,7 +58,7 @@ namespace ProyectoEstructuras.Modulo6_gestionusuarios.Vistas
             {
                 MessageBox.Show("Inicio de sesión exitoso. Bienvenido, " + adminLogueado.Correo);
                 // Abrir el formulario principal (por ejemplo, MenuForm2) y ocultar el formulario actual.
-                menuForm2 menuForm = new menuForm2();
+                menuEstacionesForm2 menuForm = new menuEstacionesForm2();
                 menuForm.Show();
                 this.Hide();
             }
@@ -57,13 +66,6 @@ namespace ProyectoEstructuras.Modulo6_gestionusuarios.Vistas
             {
                 MessageBox.Show("Error en el inicio de sesión. Verifica tus credenciales.");
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            iniciarSesion7Form1 iniciarSesion7Form = new iniciarSesion7Form1();
-            iniciarSesion7Form.Show();
-            this.Hide();
         }
     }
 }

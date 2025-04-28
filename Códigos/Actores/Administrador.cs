@@ -8,8 +8,8 @@ namespace ProyectoEstructuras.Códigos.Actores
 {
     public class Administrador: Usuario
     {
-        public Administrador(string nombre, string apellidos, string telefono, string identificacion, string correo, string contrasenia)
-            : base(nombre, apellidos, telefono, identificacion, correo, contrasenia, "Administrador")
+        public Administrador(string nombre, string apellidos, string telefono, string identificacion, string numeroIdentificacion, string correo, string contrasenia)
+            : base(nombre, apellidos, telefono, identificacion, numeroIdentificacion, correo, contrasenia, "Administrador")
         {
         }
     }

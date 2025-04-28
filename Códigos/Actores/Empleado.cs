@@ -8,8 +8,8 @@ namespace ProyectoEstructuras.Códigos.Actores
 {
     public class Empleado : Usuario
     {
-        public Empleado(string nombre, string apellidos, string telefono, string identificacion, string correo, string contrasenia, string rol)
-            : base(nombre, apellidos, telefono, identificacion, correo, contrasenia, "Empleado")
+        public Empleado(string nombre, string apellidos, string telefono, string identificacion, string numeroIdentificacion, string correo, string contrasenia, string rol)
+            : base(nombre, apellidos, telefono, identificacion, numeroIdentificacion, correo, contrasenia, "Empleado")
         {
         }
     }

@@ -9,18 +9,18 @@ namespace ProyectoEstructuras.Códigos.Servicio
 {
     public class MaquinaVenta
     {
-        private Grafos grafos;
+        //private Grafos grafos;
         private ListaDoblementeEnlazada<Boleto> listaBoletos;
-        private TablaHash<Ruta, string> rutas;
+        //private TablaHash<Ruta, string> rutas;
 
-        public MaquinaVenta(Grafos grafos, int capacidadRutas)
+        /*public MaquinaVenta(Grafos grafos, int capacidadRutas)
         {
             this.grafos = grafos;
             this.listaBoletos = new ListaDoblementeEnlazada<Boleto>();
-            this.rutas = new TablaHash<Ruta, string>(capacidadRutas);
-        }
+            //this.rutas = new TablaHash<Ruta, string>(capacidadRutas);
+        }*/
 
-        public void RegistrarRuta(Ruta ruta)
+        /*public void RegistrarRuta(Ruta ruta)
         {
             if (!rutas.ContieneClave(ruta))
             {
@@ -31,9 +31,9 @@ namespace ProyectoEstructuras.Códigos.Servicio
             {
                 Console.WriteLine($"La ruta ya existe: {ruta.Origen} → {ruta.Destino}");
             }
-        }
+        }*/
 
-        public void IniciarCompraBoleto(Pasajero pasajero)
+        /*public void IniciarCompraBoleto(Pasajero pasajero)
         {
             Console.WriteLine($"\nBienvenido, {pasajero.Nombre}! Comencemos con la compra de tu boleto.");
             Console.WriteLine("Seleccione una ruta para su viaje:");
@@ -82,9 +82,9 @@ namespace ProyectoEstructuras.Códigos.Servicio
             listaBoletos.AgregarAlFinal(nuevoBoleto);
             Console.WriteLine("\n¡Boleto comprado con éxito!");
             MostrarDetallesBoleto(nuevoBoleto);
-        }
+        }*/
 
-        private Ruta SeleccionarRuta()
+        /*public Ruta SeleccionarRuta()
         {
             Console.WriteLine("\nRutas disponibles:");
             rutas.MostrarValores();
@@ -102,9 +102,9 @@ namespace ProyectoEstructuras.Códigos.Servicio
 
             Console.WriteLine("Ruta no encontrada.");
             return null;
-        }
+        }*/
 
-        public void RecomendarRutaMasCorta(Estacion origen, Estacion destino)
+        /*public void RecomendarRutaMasCorta(Estacion origen, Estacion destino)
         {
             Console.WriteLine($"Calculando la ruta más corta desde {origen.NombreEstacion} hacia {destino.NombreEstacion}...");
 
@@ -121,7 +121,7 @@ namespace ProyectoEstructuras.Códigos.Servicio
             {
                 Console.WriteLine("No se pudo calcular la ruta más corta.");
             }
-        }
+        }*/
 
         private string ObtenerTipoBoleto(int opcion)
         {
@@ -143,7 +143,7 @@ namespace ProyectoEstructuras.Códigos.Servicio
             }
         }
 
-        private double CalcularPrecio(string tipoBoleto, int distancia)
+        public double CalcularPrecio(string tipoBoleto, int distancia)
         {
             double baseTarifaPorKm = 0.5;
             double precioBase = distancia * baseTarifaPorKm;
@@ -223,20 +223,20 @@ namespace ProyectoEstructuras.Códigos.Servicio
             }
         }
 
-        public void MostrarRutasRegistradas()
+        /*public void MostrarRutasRegistradas()
         {
             Console.WriteLine("\nRutas registradas:");
             rutas.MostrarValores();
-        }
+        }*/
 
-        public void MostrarRutasDisponibles()
+        /*public void MostrarRutasDisponibles()
         {
             Console.WriteLine("\nRutas disponibles:");
             foreach (Ruta ruta in rutas.ObtenerClaves())
             {
                 Console.WriteLine($"{ruta.Origen} → {ruta.Destino}");
             }
-        }
+        }*/
 
         public void MostrarHorariosPorRuta(string idRuta)
         {

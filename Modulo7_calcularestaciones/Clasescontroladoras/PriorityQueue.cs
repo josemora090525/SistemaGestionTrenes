@@ -14,16 +14,16 @@ namespace ProyectoEstructuras.Códigos.TareasEmpleado
 
     namespace ProyectoEstructuras.Códigos.TareasEmpleado
     {
-        public class PriorityQueue<T>
+        public class PriorityQueue<T, P> where P : IComparable<P>
         {
-            private List<(T Elemento, int Prioridad)> elementos;
+            private List<(T Elemento, P Prioridad)> elementos;
 
             public PriorityQueue()
             {
-                elementos = new List<(T, int)>();
+                elementos = new List<(T, P)>();
             }
 
-            public void Enqueue(T elemento, int prioridad)
+            public void Enqueue(T elemento, P prioridad)
             {
                 elementos.Add((elemento, prioridad));
                 elementos.Sort((x, y) => x.Prioridad.CompareTo(y.Prioridad));
@@ -31,7 +31,10 @@ namespace ProyectoEstructuras.Códigos.TareasEmpleado
 
             public T Dequeue()
             {
-                if (elementos.Count == 0) throw new InvalidOperationException("La cola está vacía.");
+                if (elementos.Count == 0)
+                {
+                    throw new InvalidOperationException("La cola de prioridad está vacía.");
+                }
                 var elemento = elementos[0].Elemento;
                 elementos.RemoveAt(0);
                 return elemento;
@@ -40,5 +43,4 @@ namespace ProyectoEstructuras.Códigos.TareasEmpleado
             public int Count => elementos.Count;
         }
     }
-
 }
